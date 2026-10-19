@@ -154,6 +154,7 @@ merge(['campfire','scatter-observatory'],'signals.json')
         run("object-engine", "python3 /opt/membrane/object-engine.py", timeout=30)
         run("yggdrasil", "python3 /opt/membrane/yggdrasil.py", timeout=30)
         run("taxonomy-braid", "python3 /opt/membrane/taxonomy-braid.py", timeout=20)
+        run("assumptions", "python3 /opt/membrane/assumption-engine.py", timeout=20)
 
     # ─── EVERY 8th PULSE (~16 min): deploy + tuebor ───
     if beat % 8 == 0:
