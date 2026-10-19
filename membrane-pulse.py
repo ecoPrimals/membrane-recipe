@@ -151,6 +151,7 @@ merge(['campfire','scatter-observatory'],'signals.json')
         run("scan-sweep-sort", "python3 /opt/membrane/scan_sweep_sort.py", timeout=120)
         run("braid-vcs", "/opt/membrane/braid-vcs.sh snapshot", timeout=60)
         run("sourdough-leaven", "python3 /opt/membrane/sourdough-leaven.py", timeout=15)
+        run("object-engine", "python3 /opt/membrane/object-engine.py", timeout=30)
 
     # ─── EVERY 8th PULSE (~16 min): deploy + tuebor ───
     if beat % 8 == 0:

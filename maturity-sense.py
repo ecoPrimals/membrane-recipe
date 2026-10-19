@@ -118,6 +118,15 @@ def gather_metrics():
     metrics['visitor_archetypes'] = (archetype_count, 12)
     metrics['visitor_count'] = (visitor_count, 20)
 
+    # === OBJECTS ===
+    obj_engine = read_json('object-engine.json')
+    pi_tier = int(3.14159 * 10)  # 31
+    gold_count = len(obj_engine.get('gold', []))
+    total_objects = obj_engine.get('total_objects', 0)
+    cross_ref = sum(1 for o in obj_engine.get('gold', []) if o.get('source_count', 0) > 1)
+    metrics['gold_objects'] = (gold_count, pi_tier)
+    metrics['cross_reference'] = (cross_ref / max(1, gold_count), 0.8)
+
     # === COOPERATION ===
     coop = read_json('cooperation.json')
     coop_summary = coop.get('summary', {})
