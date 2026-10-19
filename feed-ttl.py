@@ -13,7 +13,7 @@ Time is not just age — it is prediction and reuse:
 
 This sense runs every pulse and writes feed-health.json.
 """
-import json, os, time
+import json, os, time, math
 
 LIVE = '/opt/membrane/live-terminal'
 
@@ -93,21 +93,25 @@ def main():
         ttl = TTLS.get(f, DEFAULT_TTL)
 
         if is_fossil:
-            status = 'fossil'
+            status = "fossil"
             fossil_count += 1
-            color = 'black'
-        elif age_s <= ttl:
-            status = 'fresh'
-            fresh_count += 1
-            color = 'white'
-        elif age_s <= ttl * 2:
-            status = 'stale'
-            stale_count += 1
-            color = 'grey'
+            color = "black"
+            feed_health = 0.0
         else:
-            status = 'expired'
-            expired_count += 1
-            color = 'red'
+            ratio = age_s / max(1, ttl)
+            feed_health = round(1.0 / (1.0 + math.exp(3 * (ratio - 1.5))), 3)
+            if feed_health > 0.7:
+                status = "fresh"
+                fresh_count += 1
+                color = "white"
+            elif feed_health > 0.2:
+                status = "stale"
+                stale_count += 1
+                color = "grey"
+            else:
+                status = "expired"
+                expired_count += 1
+                color = "red"
 
         remaining_s = max(0, ttl - age_s)
         expires_at = time.strftime('%H:%M:%S', time.gmtime(now + remaining_s)) if remaining_s > 0 else 'NOW'
@@ -118,6 +122,7 @@ def main():
             'age_s': round(age_s),
             'ttl_s': ttl,
             'remaining_s': round(remaining_s),
+            'feed_health': feed_health,
             'size_kb': round(sz / 1024, 1),
         }
 

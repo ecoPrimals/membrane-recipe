@@ -64,14 +64,14 @@ def sense():
     hrv = jitte.get("tempo", 0)
 
     # Diagnosis
-    if 0.8 <= blood_pressure <= 1.5:
-        condition = "normal"
-    elif blood_pressure > 1.5:
-        condition = "hypertension"
-    elif blood_pressure < 0.5:
-        condition = "hypotension"
-    else:
-        condition = "arrhythmia"
+    # Sigmoid condition — smooth transition, not hard cutoff
+    import math
+    _hypo = 1.0 / (1.0 + math.exp(15 * (blood_pressure - 0.4)))   # high when bp < 0.4
+    _hyper = 1.0 / (1.0 + math.exp(-15 * (blood_pressure - 1.5))) # high when bp > 1.5
+    _normal = 1.0 - _hypo - _hyper
+    _normal = max(0.0, min(1.0, _normal))
+    condition_scores = {"hypotension": round(_hypo, 3), "normal": round(_normal, 3), "hypertension": round(_hyper, 3)}
+    condition = max(condition_scores, key=condition_scores.get)
 
     # THE TRANSFORMATION: ([]) -> [()] -> {""}
     cardiovascular = {
@@ -80,6 +80,7 @@ def sense():
             "ts": now,
             "alive": True,
             "condition": condition,
+            "condition_scores": condition_scores,
             "blood_pressure": blood_pressure,
         },
         "arterial": {
@@ -102,6 +103,7 @@ def sense():
             "blood_pressure": blood_pressure,
             "hrv": hrv,
             "condition": condition,
+            "condition_scores": condition_scores,
             "valve": "rebase",
             "flow": "integrate + pump",
         },

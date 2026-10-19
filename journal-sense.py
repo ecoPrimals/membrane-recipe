@@ -92,15 +92,26 @@ def main():
         observation = 'first entry — waking from nothing'
 
     # Diagnose conditions
+    # Sigmoid diagnoses — severity as gradient, not binary
+    import math
+    def _sev(x, center, steepness=12):
+        return round(1.0 / (1.0 + math.exp(steepness * (x - center))), 3)
+
     diagnoses = []
-    if isinstance(bp, (int, float)) and bp < 0.4:
-        diagnoses.append(f'hypotension (bp={bp:.3f})')
-    if isinstance(wake_level, (int, float)) and wake_level < 0.2:
-        diagnoses.append(f'sleeping (wake={wake_level:.3f})')
+    if isinstance(bp, (int, float)):
+        bp_sev = _sev(bp, 0.4)
+        if bp_sev > 0.1:
+            diagnoses.append(f'hypotension (bp={bp:.3f}, severity={bp_sev})')
+    if isinstance(wake_level, (int, float)):
+        sleep_sev = _sev(wake_level, 0.2)
+        if sleep_sev > 0.1:
+            diagnoses.append(f'sleeping (wake={wake_level:.3f}, severity={sleep_sev})')
     if human_ips == 0:
         diagnoses.append('no humans present')
-    if isinstance(tempo, (int, float)) and tempo < 0.1:
-        diagnoses.append(f'tempo flat (tempo={tempo:.3f})')
+    if isinstance(tempo, (int, float)):
+        flat_sev = _sev(tempo, 0.1)
+        if flat_sev > 0.1:
+            diagnoses.append(f'tempo flat (tempo={tempo:.3f}, severity={flat_sev})')
 
     entry = {
         'ts': now,

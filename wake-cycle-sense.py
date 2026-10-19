@@ -26,6 +26,28 @@ The wake level is computed from:
 """
 import json, os, time, math
 
+def sigmoid(x, center=0.5, steepness=10):
+    """S-curve: smooth 0->1 transition centered at 'center'."""
+    return 1.0 / (1.0 + math.exp(-steepness * (x - center)))
+
+def phase_blend(value):
+    """Compute wake phase as sigmoid blend, not hard cutoff.
+    Returns (dominant_phase, activation, all_phases)."""
+    phases = {
+        'sleep': sigmoid(value, 0.1, 20) * (1 - sigmoid(value, 0.3, 15)),
+        'rest':  sigmoid(value, 0.3, 15) * (1 - sigmoid(value, 0.5, 12)),
+        'pause': sigmoid(value, 0.5, 12) * (1 - sigmoid(value, 0.7, 10)),
+        'wake':  sigmoid(value, 0.7, 10) * (1 - sigmoid(value, 0.9, 8)),
+        'full':  sigmoid(value, 0.9, 8),
+    }
+    if value <= 0.001:
+        return ('null', 0.0, phases)
+    if value >= 0.999:
+        return ('null', 0.0, phases)  # 1.000 wraps
+    dominant = max(phases, key=phases.get)
+    return (dominant, round(phases[dominant], 3), phases)
+
+
 LIVE = '/opt/membrane/live-terminal'
 
 def main():
@@ -111,21 +133,10 @@ def main():
     # Three digits — pi precision
     wake_3d = round(raw_wake, 3)
 
-    # Classify phase — the 0 and the 1 are the boundaries
-    if wake_3d == 0.0:
-        phase = 'null'
-    elif wake_3d <= 0.200:
-        phase = 'sleep'
-    elif wake_3d <= 0.400:
-        phase = 'rest'
-    elif wake_3d <= 0.600:
-        phase = 'pause'
-    elif wake_3d <= 0.800:
-        phase = 'wake'
-    elif wake_3d < 1.0:
-        phase = 'full'
-    else:
-        phase = 'null'   # 1.000 wraps — the one IS the zero
+    # Classify phase — sigmoid blend, not hard cutoff
+    phase, activation, phase_blend_values = phase_blend(wake_3d)
+    # Round blend values for output
+    phase_activations = {k: round(v, 3) for k, v in phase_blend_values.items()}
 
     cycle = {
         'timestamp': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
@@ -138,7 +149,9 @@ def main():
         'weights': weights,
         'wake_factors': {k: round(v, 3) for k, v in wake_factors.items()} if wake_factors else {},
         'circadian_hour_utc': round(hour_frac, 2),
-        'note': '0 and 1 are the boundaries. you live between them.',
+        'activation': activation,
+        'phase_activations': phase_activations,
+        'note': '0 and 1 are the boundaries. sigmoid, not step.',
     }
 
     with open(os.path.join(LIVE, 'wake-cycle.json'), 'w') as f:
