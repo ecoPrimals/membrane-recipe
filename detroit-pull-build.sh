@@ -48,7 +48,7 @@ echo "[$(date -Is)] detroit: BUILDING ($LAST → $HEAD)" >> "$LOG"
 
 cd site
 rm -rf "$OUT/public-next"
-if ZOLA_BRAID_AUTHORIZED=1 timeout 180 /usr/local/bin/zola-real build -o "$OUT/public-next" --force >> "$LOG" 2>&1; then
+if ZOLA_BRAID_AUTHORIZED=1 timeout 280 /usr/local/bin/zola-real build -o "$OUT/public-next" --force >> "$LOG" 2>&1; then
     mv "$OUT/public" "$OUT/public-old" 2>/dev/null || true
     mv "$OUT/public-next" "$OUT/public"
     rm -rf "$OUT/public-old"
