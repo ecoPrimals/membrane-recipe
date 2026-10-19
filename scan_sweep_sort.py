@@ -523,21 +523,42 @@ def _group_persp(perspectives):
 # ═══════════════════════════════════════════════════════════════
 
 def scan(classification, graph, human, chipmunk, braid_data, fleet_data):
-    entity_count = len(classification) if isinstance(classification, dict) else 0
+    # Unwrap entities dict if classification has a wrapper (wave 191b fix)
+    if isinstance(classification, dict) and "entities" in classification:
+        entities = classification["entities"]
+    else:
+        entities = classification if isinstance(classification, dict) else {}
+    entity_count = len(entities)
     edge_count = len(graph.get("edges", graph.get("links", []))) if isinstance(graph, dict) else 0
     node_count = len(graph.get("nodes", [])) if isinstance(graph, dict) else 0
 
     sort_classes = {}
     methods = {}
     confidences = []
-    for k, v in (classification.items() if isinstance(classification, dict) else []):
+    for k, v in entities.items():
         if not isinstance(v, dict): continue
-        cls = v.get("sort_class", "unknown")
+        cls = v.get("sort_class", v.get("classification", "unknown"))
         meth = v.get("method", "unknown")
         sort_classes[cls] = sort_classes.get(cls, 0) + 1
         methods[meth] = methods.get(meth, 0) + 1
         if v.get("confidence"):
             confidences.append(v["confidence"])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     edge_types = {}
     for e in (graph.get("edges", graph.get("links", [])) if isinstance(graph, dict) else []):
@@ -1807,10 +1828,13 @@ def main():
     # 5-stage pipeline
     scan_data = scan(classification, graph, human, chipmunk, braid_data, fleet_data)
 
+    # Unwrap entities for cross-reference blocks (wave 191b)
+    cls_entities = classification.get("entities", classification) if isinstance(classification, dict) else {}
+
     # Fleet cross-reference confidence boost (wave 190)
     if scan_data["avg_confidence"] < 0.85 and isinstance(classification, dict):
         boosted = 0
-        for k, v in classification.items():
+        for k, v in cls_entities.items():
             if isinstance(v, dict) and v.get("confidence", 0) < 0.85:
                 # Cross-reference with fleet — if fleet has a strong signal, boost
                 fleet_class = fleet_data.get("sort_classes", {})
@@ -1818,7 +1842,7 @@ def main():
                     v["confidence"] = min(0.88, v.get("confidence", 0) + 0.05)
                     boosted += 1
         if boosted > 0:
-            confs = [v.get("confidence", 0) for v in classification.values() if isinstance(v, dict) and v.get("confidence")]
+            confs = [v.get("confidence", 0) for v in cls_entities.values() if isinstance(v, dict) and v.get("confidence")]
             scan_data["avg_confidence"] = round(sum(confs) / max(1, len(confs)), 3) if confs else scan_data["avg_confidence"]
 
     # Braid cross-reference confidence boost (wave 190b)
@@ -1829,13 +1853,13 @@ def main():
                 if isinstance(node, str):
                     braid_routes.add(node.lower())
         boosted = 0
-        for k, v in classification.items():
+        for k, v in cls_entities.items():
             if isinstance(v, dict) and v.get("confidence", 0) < 0.90:
                 if k.lower() in braid_routes or any(br in k.lower() for br in braid_routes):
                     v["confidence"] = min(0.92, v.get("confidence", 0) + 0.04)
                     boosted += 1
         if boosted > 0:
-            confs = [v.get("confidence", 0) for v in classification.values()
+            confs = [v.get("confidence", 0) for v in cls_entities.values()
                      if isinstance(v, dict) and v.get("confidence")]
             scan_data["avg_confidence"] = round(sum(confs) / max(1, len(confs)), 3) if confs else scan_data["avg_confidence"]
 
