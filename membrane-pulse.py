@@ -113,6 +113,8 @@ def main():
     run("chipmunk-refresh", "python3 /opt/membrane/chipmunk-refresh.py", timeout=10)
     # journal — the membrane diary. null or grey, never blank.
     run("journal", "python3 /opt/membrane/journal-sense.py", timeout=10)
+    # feed health — time as signal. ttl-based invalidation.
+    run("feed-ttl", "python3 /opt/membrane/feed-ttl.py", timeout=10)
 
     # ─── EVERY 3rd PULSE (~6 min): epitope + pipeline ───
     if beat % 3 == 0:
@@ -147,13 +149,14 @@ merge(['campfire','scatter-observatory'],'signals.json')
     # ─── EVERY 8th PULSE (~16 min): deploy + tuebor ───
     if beat % 8 == 0:
         if tempo == "slow":
-            log("  DEFER deploy+tuebor (tempo=slow)")
+            log("  DEFER deploy+tuebor+detroit (tempo=slow)")
         else:
+            # Architect -> Foreman -> Builder (mise en place)
+            run("foreman", "python3 /opt/membrane/build-foreman.py", timeout=15)
             run("deploy", "/opt/membrane/async-membrane.sh deploy", timeout=120)
             run("tuebor", "/opt/membrane/tuebor-pull-build.sh", timeout=120)
             run("detroit", "/opt/membrane/detroit-pull-build.sh", timeout=300)
             run("hud", "/opt/membrane/hud-pull.sh", timeout=30)
-
     # ─── MIRROR detroit data (every 5th, after scan) ───
     if beat % 5 == 0:
         run("mirror", """bash -c '
