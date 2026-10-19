@@ -109,6 +109,10 @@ def main():
     run("null-strobe", "python3 /opt/membrane/null-strobe.py", timeout=10)
     # wake cycle metabolism (wave 191b — "life also sleeps")
     run("wake-cycle", "python3 /opt/membrane/wake-cycle-sense.py", timeout=10)
+    # refresh stale chipmunk.json base fields with real values
+    run("chipmunk-refresh", "python3 /opt/membrane/chipmunk-refresh.py", timeout=10)
+    # journal — the membrane diary. null or grey, never blank.
+    run("journal", "python3 /opt/membrane/journal-sense.py", timeout=10)
 
     # ─── EVERY 3rd PULSE (~6 min): epitope + pipeline ───
     if beat % 3 == 0:
