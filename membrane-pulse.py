@@ -157,6 +157,7 @@ merge(['campfire','scatter-observatory'],'signals.json')
         run("assumptions", "python3 /opt/membrane/assumption-engine.py", timeout=20)
         run("self-test", "python3 /opt/membrane/self-assumptions.py", timeout=20)
         run("phylo-self", "python3 /opt/membrane/phylo-self.py", timeout=20)
+        run("doorbell", "python3 /opt/membrane/doorbell.py", timeout=20)
 
     # ─── EVERY 8th PULSE (~16 min): deploy + tuebor ───
     if beat % 8 == 0:
