@@ -98,8 +98,9 @@ def gather_metrics():
     # === COMMUNITY ===
     commensals = read_json('commensals.json')
     commensal_count = commensals.get('total_organisms', 0)
-    peers = commensals.get('peers', {})
-    metrics['commensal_species'] = (len(peers) if isinstance(peers, dict) else commensal_count, 20)
+    peers = commensals.get('peers', [])
+    alive_peers = sum(1 for p in peers if isinstance(p, dict) and p.get('alive', False)) if isinstance(peers, list) else 0
+    metrics['mesh_peers'] = (alive_peers, 5)  # 4 nodes in fleet, target 5
 
     sym = read_json('symbiosis.json')
     sym_summary = sym.get('summary', {})
@@ -114,8 +115,32 @@ def gather_metrics():
     stories = read_json('visitor-stories.json')
     visitor_count = stories.get('total_visitors', 0)
     archetype_count = len(stories.get('archetypes', []))
-    metrics['visitor_archetypes'] = (archetype_count, 20)
-    metrics['visitor_count'] = (visitor_count, 50)
+    metrics['visitor_archetypes'] = (archetype_count, 12)
+    metrics['visitor_count'] = (visitor_count, 20)
+
+    # === COOPERATION ===
+    coop = read_json('cooperation.json')
+    coop_summary = coop.get('summary', {})
+    membrane_coop = coop_summary.get('membrane_cooperation', 0)
+    metrics['cooperation'] = (membrane_coop, 0.8)
+
+    # === LEAVEN (crush readiness) ===
+    leaven = read_json('sourdough-leaven.json')
+    leaven_summary = leaven.get('summary', {})
+    leavened_count = leaven_summary.get('leavened', 0)
+    metrics['scripts_leavened'] = (leavened_count, 10)
+
+    # === FOSSILS ===
+    compost = read_json('fossil-compost.json')
+    compost_summary = compost.get('summary', {})
+    compost_count = compost_summary.get('compost', 0)
+    ghost_count = compost_summary.get('ghosts', 0)
+    total_fossils = compost_summary.get('total_fossils', 0)
+    if total_fossils > 0:
+        compost_ratio = compost_count / total_fossils
+    else:
+        compost_ratio = 0
+    metrics['fossil_composted'] = (compost_ratio, 0.5)  # target: half of fossils composted
 
     return metrics
 
