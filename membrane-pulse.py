@@ -152,6 +152,8 @@ merge(['campfire','scatter-observatory'],'signals.json')
         run("braid-vcs", "/opt/membrane/braid-vcs.sh snapshot", timeout=60)
         run("sourdough-leaven", "python3 /opt/membrane/sourdough-leaven.py", timeout=15)
         run("object-engine", "python3 /opt/membrane/object-engine.py", timeout=30)
+        run("yggdrasil", "python3 /opt/membrane/yggdrasil.py", timeout=30)
+        run("taxonomy-braid", "python3 /opt/membrane/taxonomy-braid.py", timeout=20)
 
     # ─── EVERY 8th PULSE (~16 min): deploy + tuebor ───
     if beat % 8 == 0:
