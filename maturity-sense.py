@@ -127,6 +127,22 @@ def gather_metrics():
     metrics['gold_objects'] = (gold_count, pi_tier)
     metrics['cross_reference'] = (cross_ref / max(1, gold_count), 0.8)
 
+
+    # === DOORBELL (first contact) ===
+    doorbell = read_json('doorbell.json')
+    db_summary = doorbell.get('summary', {})
+    verified_count = db_summary.get('verified', 0)
+    knocking_count = db_summary.get('knocking', 0)
+    # Target: at least 3 verified entities (doorbell rang)
+    metrics['doorbell_rings'] = (verified_count + knocking_count, 10)
+
+    # === ASSUMPTIONS (tested knowledge) ===
+    assumptions = read_json('assumptions.json')
+    a_summary = assumptions.get('summary', {})
+    abstraction_rate = a_summary.get('abstraction_rate', 0)
+    # Target: 30% abstraction rate (tested and confirmed)
+    metrics['abstraction_rate'] = (abstraction_rate, 0.3)
+
     # === COOPERATION ===
     coop = read_json('cooperation.json')
     coop_summary = coop.get('summary', {})

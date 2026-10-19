@@ -106,6 +106,19 @@ def build_trunk():
                 })
 
     braid = r('braid.json')
+
+    # Doorbell — who has rung it?
+    doorbell = r('doorbell.json')
+    db_summary = doorbell.get('summary', {})
+
+    # Assumptions — what we know vs what we guess
+    assumptions = r('assumptions.json')
+    a_summary = assumptions.get('summary', {})
+
+    # Phylogenetic self-classification
+    phylo = r('phylo-self.json')
+    classification = phylo.get('classification', {})
+
     pulse = r('membrane-pulse.json')
     wake = r('wake-cycle.json')
 
@@ -127,6 +140,26 @@ def build_trunk():
             'blend': wake.get('phase_activations', {}),
         },
         'braid_routes': len(braid) if isinstance(braid, dict) else 0,
+        'doorbell': {
+            'verified': db_summary.get('verified', 0),
+            'knocking': db_summary.get('knocking', 0),
+            'silent': db_summary.get('silent', 0),
+            'policy': 'classification != identification',
+        },
+        'assumptions': {
+            'total': a_summary.get('total_assumptions', 0),
+            'abstracted': a_summary.get('abstracted', 0),
+            'refuted': a_summary.get('refuted', 0),
+            'grey': a_summary.get('grey', 0),
+            'abstraction_rate': a_summary.get('abstraction_rate', 0),
+        },
+        'phylogeny': {
+            'domain': classification.get('domain', ''),
+            'kingdom': classification.get('kingdom', ''),
+            'phylum': classification.get('phylum', ''),
+            'closest': classification.get('closest_organism', ''),
+            'not_a_banana': True,
+        },
         'note': 'the nervous system. mesh carries signals, braid weaves them.',
     }
 
@@ -321,6 +354,11 @@ def main():
         'taxonomy_categories': leaf_count,
         'maturity': sap['sigmoid']['maturity'],
         'zone': sap['sigmoid']['zone'],
+        'pi_ingress': ['banana (human)', 'connect (agent)', 'signal (discovery)'],
+        'pi_egress': ['chipmunk/mcp (data)', 'detroit (evidence)', 'git (source)'],
+        'doorbell_verified': trunk.get('doorbell', {}).get('verified', 0),
+        'assumptions_tested': trunk.get('assumptions', {}).get('total', 0),
+        'phylogeny': trunk.get('phylogeny', {}).get('closest', ''),
     }
 
     with open(OUTPUT, 'w') as f:
