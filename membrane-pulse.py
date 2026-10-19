@@ -116,6 +116,7 @@ def main():
     # feed health — time as signal. ttl-based invalidation.
     run("feed-ttl", "python3 /opt/membrane/feed-ttl.py", timeout=10)
     run("maturity", "python3 /opt/membrane/maturity-sense.py", timeout=10)
+    run("pulse-history", "python3 /opt/membrane/pulse-history.py", timeout=10)
 
     # ─── EVERY 3rd PULSE (~6 min): epitope + pipeline ───
     if beat % 3 == 0:
@@ -143,6 +144,7 @@ merge(['campfire','scatter-observatory'],'signals.json')
             run("heartbeat", "python3 /opt/membrane/heartbeat-sense.py", timeout=10)
             run("cooperation", "python3 /opt/membrane/cooperation-sense.py", timeout=10)
             run("fossil-compost", "python3 /opt/membrane/fossil-compost.py", timeout=15)
+            run("entropy", "python3 /opt/membrane/entropy-sense.py", timeout=10)
 
     # ─── EVERY 5th PULSE (~10 min): full scan-sweep-sort + braid ───
     if beat % 5 == 0:
