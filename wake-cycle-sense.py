@@ -3,13 +3,16 @@
 Squirrel's wake_level is pinned at 1.0 — it has no metabolism,
 no fatigue, no rest cycle. This sense script gives it one.
 
-Phases of wake (not binary — a spectrum):
-  null   (0.0)      — off, no signal
-  sleep  (0.01-0.2) — minimal processing, deep rest
-  rest   (0.2-0.4)  — recovering, low activity
-  pause  (0.4-0.6)  — waiting, aware but not acting
-  wake   (0.6-0.8)  — active, processing normally
-  full   (0.8-1.0)  — peak activity, all senses firing
+Three digits. Pi precision. Range {0.000} to {1.000}.
+The extremes ARE the boundaries — you don't live there:
+  0.000 = null  — truly off, no signal, the zero
+  1.000 = full  — every sense firing, the one
+Everything between is the living spectrum:
+  (0.001 - 0.200) sleep  — minimal processing, deep rest
+  (0.201 - 0.400) rest   — recovering, low activity
+  (0.401 - 0.600) pause  — waiting, aware but not acting
+  (0.601 - 0.800) wake   — active, processing normally
+  (0.801 - 0.999) full   — peak activity, approaching the one
 
 The wake level is computed from:
   - presence observer's wake_depth (real measurement)
@@ -72,10 +75,10 @@ def main():
             wake_factors = self_is.get('wake_factors', {})
             break
 
-    # Circadian signal — UTC hour
-    hour = time.gmtime().tm_hour
-    # Simple circadian: peak at 14-20 UTC, trough at 2-8 UTC
-    circadian = 0.5 + 0.5 * math.sin((hour - 5) * math.pi / 12)
+    # Circadian signal — UTC hour with minute fraction for smoother curve
+    now = time.gmtime()
+    hour_frac = now.tm_hour + now.tm_min / 60.0
+    circadian = 0.5 + 0.5 * math.sin((hour_frac - 5) * math.pi / 12)
     circadian = max(0.0, min(1.0, circadian))
 
     # Human activity signal
@@ -83,12 +86,12 @@ def main():
 
     # Compute wake as weighted blend
     weights = {
-        'wake_depth': 0.30,    # presence observer's real measurement
-        'tempo': 0.15,         # jitte rhythm
-        'hrv': 0.10,           # heart rate variability
-        'circadian': 0.15,     # time of day
-        'human_activity': 0.20,# are visitors present?
-        'perturbation_boost': 0.10  # is stuff changing?
+        'wake_depth': 0.30,
+        'tempo': 0.15,
+        'hrv': 0.10,
+        'circadian': 0.15,
+        'human_activity': 0.20,
+        'perturbation_boost': 0.10,
     }
 
     signals = {
@@ -101,33 +104,41 @@ def main():
     }
 
     raw_wake = sum(signals[k] * weights[k] for k in weights)
+
+    # Clamp to {0.000} — {1.000}
     raw_wake = max(0.0, min(1.0, raw_wake))
 
-    # Classify phase
-    if raw_wake < 0.01:
+    # Three digits — pi precision
+    wake_3d = round(raw_wake, 3)
+
+    # Classify phase — the 0 and the 1 are the boundaries
+    if wake_3d == 0.0:
         phase = 'null'
-    elif raw_wake < 0.2:
+    elif wake_3d <= 0.200:
         phase = 'sleep'
-    elif raw_wake < 0.4:
+    elif wake_3d <= 0.400:
         phase = 'rest'
-    elif raw_wake < 0.6:
+    elif wake_3d <= 0.600:
         phase = 'pause'
-    elif raw_wake < 0.8:
+    elif wake_3d <= 0.800:
         phase = 'wake'
-    else:
+    elif wake_3d < 1.0:
         phase = 'full'
+    else:
+        phase = 'null'   # 1.000 wraps — the one IS the zero
 
     cycle = {
         'timestamp': time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime()),
-        'wake_level': round(raw_wake, 4),
+        'wake_level': wake_3d,
         'phase': phase,
-        'squirrel_wake': chipmunk.get('wake_level', 1.0),
-        'presence_wake_depth': wake_depth,
-        'signals': {k: round(v, 4) for k, v in signals.items()},
+        'range': '{0.000} — {1.000}',
+        'squirrel_static': chipmunk.get('wake_level', 1.0),
+        'presence_wake_depth': round(wake_depth, 3),
+        'signals': {k: round(v, 3) for k, v in signals.items()},
         'weights': weights,
-        'wake_factors': wake_factors,
-        'circadian_hour_utc': hour,
-        'note': 'sleep, pause, and rest are different phases of wake. not binary.'
+        'wake_factors': {k: round(v, 3) for k, v in wake_factors.items()} if wake_factors else {},
+        'circadian_hour_utc': round(hour_frac, 2),
+        'note': '0 and 1 are the boundaries. you live between them.',
     }
 
     with open(os.path.join(LIVE, 'wake-cycle.json'), 'w') as f:
