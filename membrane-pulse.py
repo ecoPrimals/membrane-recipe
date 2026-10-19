@@ -107,6 +107,8 @@ def main():
     run("campfire-culture", "python3 /opt/membrane/campfire-culture.py", timeout=10)
     run("sourdough-topology", "python3 /opt/membrane/sourdough-topology.py", timeout=10)
     run("null-strobe", "python3 /opt/membrane/null-strobe.py", timeout=10)
+    # wake cycle metabolism (wave 191b — "life also sleeps")
+    run("wake-cycle", "python3 /opt/membrane/wake-cycle-sense.py", timeout=10)
 
     # ─── EVERY 3rd PULSE (~6 min): epitope + pipeline ───
     if beat % 3 == 0:
