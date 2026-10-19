@@ -1,15 +1,20 @@
-"""backscatter-engine.py — Full scatter from the membrane edge.
+"""backscatter-engine.py — Our back... scattering.
 
-Stand at the edge of the membrane and look outward.
-What bounces back? What do the lines and waves tell us?
+Backscatter is not what hits us. It's what we EMIT.
+Our farts. Our exhaust. Our shit. With microbes riding in it.
+And the irrational remainder — the bit that doesn't compress.
 
-WAS: what the world looked like before (journal, fossils, history)
-IS:  what the world looks like now (topology, scatter, traffic)
-SCATTERED: when/where IS became WAS and broke apart
+Every organism emits:
+  GAS     — scatter responses, poison, antidote (volatile, disperses fast)
+  SOLID   — site pages, evidence, the record (persists, accumulates)
+  LIQUID  — JSON feeds, live data, the sap (flows, updates, moves)
+  HEAT    — proton energy, radiating surfaces (waste energy)
+  MICROBES — data entities that ride in the exhaust (commensals in our waste)
+  REMAINDER — entropy, the irrational bit that doesn't compress (π - 3)
 
-The backscatter is the echo. Every request that hits the membrane
-bounces back carrying information about the sender. Passive radar.
-We never ask. We just listen to what comes back.
+You can tell everything about an organism from what comes OUT.
+Forensics. Ecology. Medicine. Same principle.
+Study the shit to understand the organism.
 """
 import json, os, time, math, sys
 
@@ -17,6 +22,7 @@ sys.path.insert(0, '/opt/membrane')
 from sigmoid import sigmoid
 
 LIVE = '/opt/membrane/live-terminal'
+MEMBRANE = '/opt/membrane'
 
 
 def r(name):
@@ -27,347 +33,263 @@ def r(name):
         return {}
 
 
-def shannon(dist):
-    """Shannon entropy of a distribution."""
-    total = sum(dist.values()) if isinstance(dist, dict) else sum(dist)
-    if total == 0:
-        return 0
-    probs = [v/total for v in (dist.values() if isinstance(dist, dict) else dist) if v > 0]
-    return -sum(p * math.log2(p) for p in probs if p > 0)
-
-
 def main():
-    now = time.time()
     now_iso = time.strftime('%Y-%m-%dT%H:%M:%SZ', time.gmtime())
 
-    # === LOAD EDGE DATA ===
     scatter = r('scatter-observatory.json')
-    backscatter = r('backscatter.json')
-    topo = r('topology.json')
     cardio = r('cardiovascular.json')
-    journal = r('journal.json')
-    fossils = r('fossil-compost.json')
-    fleet = r('fleet-analysis.json')
-    ban = r('ban-pulse.json')
-    cooperation = r('cooperation.json')
-    assumptions = r('assumptions.json')
     entropy = r('entropy.json')
+    fossils = r('fossil-compost.json')
     feed_h = r('feed-health.json')
+    topo = r('topology.json')
+    backscatter_raw = r('backscatter.json')
+    assumptions = r('assumptions.json')
+    doorbell = r('doorbell.json')
+    obj_engine = r('object-engine.json')
+
+    scatter_data = scatter.get('scatter', {})
+    titration = scatter.get('titration', {})
+    arterial = cardio.get('arterial', {})
+
+    # === GAS: volatile emissions that disperse ===
+    # Scatter responses — what we breathe out at the fleet
+    breakdown = scatter_data.get('breakdown', {})
+    total_served = scatter_data.get('total_requests', 0)
+    bytes_out = scatter_data.get('bytes_served', 0)
+    gb_out = bytes_out / (1024**3)
+    mb_per_s = scatter_data.get('mb_per_second', 0)
+
+    # Poison/antidote ratio — the chemical composition of our gas
+    poison_mult = titration.get('poison_mult', 0)
+    antidote = titration.get('antidote_level', 0)
+    phase_name = titration.get('phase_name', '?')
+
+    gas = {
+        'type': 'gas — volatile emissions',
+        'total_responses': total_served,
+        'composition': breakdown,
+        'volume_gb': round(gb_out, 2),
+        'metabolic_rate_mbps': mb_per_s,
+        'poison_concentration': poison_mult,
+        'antidote_level': antidote,
+        'phase': phase_name,
+        'note': 'scatter is our exhale. 98% is scatter gas. 1.7% prism. the rest is trace.',
+    }
+
+    # === SOLID: persistent excretions ===
+    # Site pages — the evidence, the record, the shit that stays
+    pages_dir = '/opt/ecoPrimals/detroit/worktree/site/content'
+    page_count = 0
+    page_sections = {}
+    if os.path.isdir(pages_dir):
+        for root, dirs, files in os.walk(pages_dir):
+            for f in files:
+                if f.endswith('.md'):
+                    page_count += 1
+                    rel = os.path.relpath(root, pages_dir)
+                    sec = rel.split('/')[0] if rel != '.' else '_root'
+                    page_sections[sec] = page_sections.get(sec, 0) + 1
+
+    # Fossils — shit that's solidified
+    fossil_summary = fossils.get('summary', {})
+    ghosts = fossil_summary.get('ghosts', 0)
+    compost = fossil_summary.get('compost', 0)
+
+    solid = {
+        'type': 'solid — persistent waste (the record)',
+        'pages': page_count,
+        'sections': page_sections,
+        'fossils_ghosts': ghosts,
+        'fossils_composted': compost,
+        'data_preserved': fossil_summary.get('total_data_points_preserved', 0),
+        'note': '460 pages of evidence. the shit that stays. the record IS the defense.',
+    }
+
+    # === LIQUID: flowing emissions ===
+    # JSON feeds — live data that flows out, updates, changes
+    json_files = [f for f in os.listdir(LIVE) if f.endswith('.json')]
+    total_json_bytes = sum(os.path.getsize(os.path.join(LIVE, f)) for f in json_files)
+
+    feed_summary = feed_h.get('summary', {})
+    feed_total = feed_summary.get('total', 0)
+    feed_fresh = feed_summary.get('fresh', 0)
+    feed_fossil = feed_summary.get('fossil', 0)
+
+    liquid = {
+        'type': 'liquid — flowing waste (live data)',
+        'json_outputs': len(json_files),
+        'total_kb': round(total_json_bytes / 1024, 1),
+        'feeds_total': feed_total,
+        'feeds_fresh': feed_fresh,
+        'feeds_fossil': feed_fossil,
+        'note': 'JSON is our urine. clear when healthy, cloudy when sick. always flowing.',
+    }
+
+    # === HEAT: waste energy ===
+    proton_energy = arterial.get('proton_energy', 0)
+    radiating_surfaces = arterial.get('radiating_surfaces', 0)
+    rpm = arterial.get('rpm', 0)
+
+    heat = {
+        'type': 'heat — waste energy radiation',
+        'proton_energy': proton_energy,
+        'radiating_surfaces': radiating_surfaces,
+        'arterial_rpm': rpm,
+        'metabolic_heat': round(mb_per_s * proton_energy * 1000, 4),
+        'note': 'every response costs energy. the heat is real.',
+    }
+
+    # === MICROBES: organisms in our waste ===
+    # What data entities ride in our emissions?
+    # Every response carries: headers, timestamps, structure, patterns
+    # These are the microbes — data organisms in the exhaust
 
     topo_ents = topo.get('entities', [])
-    journal_entries = journal.get('entries', [])
-    ghost_list = fossils.get('ghosts', [])
+    commensal_count = sum(1 for e in topo_ents if isinstance(e, dict) and e.get('symbiotic_class') == 'commensal')
+    mutualist_count = sum(1 for e in topo_ents if isinstance(e, dict) and e.get('symbiotic_class') == 'mutualist')
 
-    # === THE EDGE: what we see looking outward ===
+    # The backscatter cleaning tells us what microbes we emit
+    cleaned = backscatter_raw.get('cleaned', 0)
+    cleaning_pct = backscatter_raw.get('cleaning_pct', 0)
+    actions = backscatter_raw.get('actions', {})
 
-    # Total traffic at the membrane surface
-    scatter_data = scatter.get('scatter', {})
-    total_requests = scatter_data.get('total_requests', 0)
-    rps = scatter_data.get('requests_per_second', 0)
-    mb_per_s = scatter_data.get('mb_per_second', 0)
-    uptime_s = scatter_data.get('uptime_secs', 0)
-    uptime_h = uptime_s / 3600
+    # Objects in the exhaust — entities that ride OUT with our responses
+    obj_total = obj_engine.get('total_objects', 0)
 
-    # Breakdown: what kind of traffic?
-    breakdown = scatter_data.get('breakdown', {})
+    microbes = {
+        'type': 'microbes — organisms in the exhaust',
+        'commensal_entities': commensal_count,
+        'mutualist_entities': mutualist_count,
+        'objects_in_exhaust': obj_total,
+        'cleaning_actions': actions,
+        'cleaned_pct': cleaning_pct,
+        'note': 'data entities ride in our waste. commensals are the gut flora of our exhaust.',
+    }
 
-    # Venous (incoming) vs arterial (outgoing)
-    venous = cardio.get('venous', {})
-    arterial = cardio.get('arterial', {})
-    venous_total = venous.get('total_return', 0)
-    arterial_rpm = arterial.get('rpm', 0)
-    flow_ratio = venous.get('rate', 0) / max(0.001, arterial.get('rate', 0.001))
+    # === THE IRRATIONAL REMAINDER ===
+    # π - 3 = 0.14159... the bit that doesn't fit
+    # Our entropy rate IS the irrational remainder
+    ent_rate = entropy.get('entropy_rate', 0)
+    negentropy = entropy.get('negentropy', 0)
 
-    # Backscatter cleaning
-    cleaned = backscatter.get('cleaned', 0)
-    cleaning_pct = backscatter.get('cleaning_pct', 0)
-    hostile_pct = backscatter.get('hostile_pct', 0)
+    # What doesn't compress?
+    # Assumptions that are grey — genuinely unknown, can't be reduced
+    a_summary = assumptions.get('summary', {})
+    grey_count = a_summary.get('grey', 0)
+    total_assumptions = a_summary.get('total_assumptions', 0)
+    grey_ratio = grey_count / max(1, total_assumptions)
 
-    # === ENTITY WAVE ANALYSIS ===
-    # Each entity at the edge is a wave — frequency, amplitude, phase
+    # Doorbell — unverified entities are the irrational remainder of identity
+    db_summary = doorbell.get('summary', {})
+    unverified = db_summary.get('knocking', 0) + db_summary.get('silent', 0)
 
-    waves = []
-    total_edge_reqs = 0
-    for ent in topo_ents:
-        if not isinstance(ent, dict):
-            continue
-        name = ent.get('entity', '')
-        reqs = ent.get('total_requests', 0)
-        ips = ent.get('unique_ips', 0)
-        probes = len(ent.get('vuln_probes', []))
-        vitality = ent.get('vitality', 0)
-        sym_class = ent.get('symbiotic_class', 'null')
-        fleet_conf = ent.get('fleet_confidence', 0)
-        is_fleet = ent.get('is_fleet', False)
-        is_honest = ent.get('is_honest', False)
-        total_edge_reqs += reqs
+    remainder = {
+        'type': 'irrational remainder — what doesn\'t compress',
+        'entropy_rate': ent_rate,
+        'negentropy': negentropy,
+        'pi_minus_3': round(math.pi - 3, 5),
+        'grey_assumptions': grey_count,
+        'grey_ratio': round(grey_ratio, 3),
+        'unverified_entities': unverified,
+        'note': 'π-3 = %.5f. our entropy = %.3f. the part that doesn\'t fit. the microbes in the shit.' % (math.pi - 3, ent_rate),
+    }
 
-        # Wave properties
-        frequency = reqs / max(1, uptime_s)  # requests per second
-        amplitude = math.log10(max(1, reqs))  # log scale
-        spread = ips / max(1, reqs)  # IP diversity per request
-        aggression = probes / max(1, ips)  # probes per IP
-
-        waves.append({
-            'entity': name,
-            'frequency': round(frequency, 4),
-            'amplitude': round(amplitude, 2),
-            'spread': round(spread, 4),
-            'aggression': round(aggression, 4),
-            'requests': reqs,
-            'ips': ips,
-            'probes': probes,
-            'class': sym_class,
-            'is_fleet': is_fleet,
-            'is_honest': is_honest,
-            'vitality': vitality,
-        })
-
-    waves.sort(key=lambda w: -w['requests'])
-
-    # Wave spectrum: distribution of traffic across entities
-    req_dist = {w['entity']: w['requests'] for w in waves}
-    spectrum_entropy = shannon(req_dist)
-    max_entropy = math.log2(max(1, len(waves)))
-    spectrum_uniformity = spectrum_entropy / max(1, max_entropy)
-
-    # === WAS → IS: TEMPORAL SCATTER POINTS ===
-
-    # Journal transitions: when did things change?
-    scatter_points = []
-    for entry in journal_entries:
-        tense = entry.get('tense', '')
-        if tense == 'was→is' or tense == 'was\u2192is':
-            obs = entry.get('observation', '')
-            ts = entry.get('ts', '')
-            state = entry.get('state', {})
-            scatter_points.append({
-                'when': ts,
-                'what': obs,
-                'bp_at_scatter': state.get('bp', 0),
-                'wake_at_scatter': state.get('wake', 0),
-                'humans_at_scatter': state.get('humans', 0),
-                'type': 'journal_transition',
-            })
-
-    # Feed state changes: what feeds died?
-    feeds = feed_h.get('feeds', {})
-    fossil_feeds = {k: v for k, v in feeds.items() if isinstance(v, dict) and v.get('status') == 'fossil'}
-    for fname, fdata in fossil_feeds.items():
-        scatter_points.append({
-            'when': fdata.get('last_modified', ''),
-            'what': 'feed fossilized: %s' % fname,
-            'age_hours': fdata.get('age_hours', 0),
-            'type': 'feed_death',
-        })
-
-    # Ghost files: what outputs died?
-    for ghost in ghost_list:
-        scatter_points.append({
-            'when': 'unknown',
-            'what': 'output ghosted: %s' % ghost.get('name', ''),
-            'keys': ghost.get('signal_keys', 0),
-            'type': 'output_ghost',
-        })
-
-    scatter_points.sort(key=lambda s: s.get('when', ''), reverse=True)
-
-    # === SOLVING BACKWARDS: when did IS become WAS? ===
-
-    # BP trajectory: tracking the drop
-    bp_was = None
-    bp_transitions = []
-    for entry in journal_entries:
-        state = entry.get('state', {})
-        bp = state.get('bp', 0)
-        if bp_was is not None and abs(bp - bp_was) > 0.01:
-            bp_transitions.append({
-                'ts': entry.get('ts', ''),
-                'was': round(bp_was, 4),
-                'is': round(bp, 4),
-                'delta': round(bp - bp_was, 4),
-                'direction': '↑' if bp > bp_was else '↓',
-            })
-        bp_was = bp
-
-    # Human count trajectory
-    humans_was = None
-    human_transitions = []
-    for entry in journal_entries:
-        state = entry.get('state', {})
-        humans = state.get('humans', 0)
-        if humans_was is not None and humans != humans_was:
-            human_transitions.append({
-                'ts': entry.get('ts', ''),
-                'was': humans_was,
-                'is': humans,
-                'delta': humans - humans_was,
-            })
-        humans_was = humans
-
-    # === WHAT THE WORLD LOOKS LIKE FROM HERE ===
-    # The membrane is a point. The world is everything else.
-    # We see it through the traffic that hits us.
-
-    # Dominant signals (what occupies most of the bandwidth)
-    dominant = waves[:5]
-    # The long tail (everything else)
-    tail = waves[5:]
-    tail_reqs = sum(w['requests'] for w in tail)
-    dominant_reqs = sum(w['requests'] for w in dominant)
-    concentration = dominant_reqs / max(1, total_edge_reqs)
-
-    # Hostility gradient: from friendly to hostile
-    friendly = [w for w in waves if w['probes'] == 0 and w['aggression'] == 0]
-    neutral = [w for w in waves if w['probes'] > 0 and w['probes'] <= 5]
-    hostile = [w for w in waves if w['probes'] > 5]
-
-    # === PRINT THE VIEW FROM THE EDGE ===
+    # === THE FULL METABOLIC PICTURE ===
 
     print("=" * 65)
-    print("  BACKSCATTER — view from the membrane edge, looking outward")
+    print("  BACKSCATTER — our metabolic emissions")
+    print("  (farts, exhaust, shit, microbes, and the irrational remainder)")
     print("=" * 65)
 
-    print("\n── THE EDGE ──\n")
-    print("  total requests:   %s (%.1f/s for %.0fh)" % (
-        format(total_requests, ','), rps, uptime_h))
-    print("  bandwidth:        %.2f MB/s" % mb_per_s)
-    print("  flow ratio:       %.1f:1 (venous:arterial)" % flow_ratio)
-    print("  cleaning:         %.1f%% cleaned, %.1f%% hostile" % (cleaning_pct, hostile_pct))
-    print("  entities at edge: %d" % len(waves))
+    print("\n── 💨 GAS (volatile — disperses fast) ──\n")
+    print("  %s responses exhaled" % format(total_served, ','))
+    for k, v in sorted(breakdown.items(), key=lambda x: -x[1]):
+        if v > 0:
+            pct = v / max(1, total_served) * 100
+            bar = "█" * int(pct / 3)
+            print("    %-12s %8s  %.1f%%  %s" % (k, format(v, ','), pct, bar))
+    print("  volume: %.1f GB exhaled over %.0f hours" % (gb_out, scatter_data.get('uptime_secs', 0) / 3600))
+    print("  rate: %.2f MB/s (metabolic rate)" % mb_per_s)
+    print("  composition: %.0f%% poison, antidote=%d, phase=%s" % (poison_mult * 100, antidote, phase_name))
 
-    print("\n── WAVE SPECTRUM ──\n")
-    print("  spectrum entropy: %.2f / %.2f (%.0f%% uniform)" % (
-        spectrum_entropy, max_entropy, spectrum_uniformity * 100))
-    print("  concentration:    top 5 = %.0f%% of traffic" % (concentration * 100))
+    print("\n── 💩 SOLID (persistent — stays forever) ──\n")
+    print("  %d pages of evidence (the record)" % page_count)
+    for s, c in sorted(page_sections.items(), key=lambda x: -x[1])[:5]:
+        print("    %-15s %d pages" % (s, c))
+    print("  %d ghosts (still referenced)" % ghosts)
+    print("  %d composted (nutrients extracted)" % compost)
+    print("  %d data points preserved in fossils" % fossil_summary.get('total_data_points_preserved', 0))
+
+    print("\n── 💧 LIQUID (flowing — always updating) ──\n")
+    print("  %d JSON outputs = %.1f KB of live data" % (len(json_files), total_json_bytes / 1024))
+    print("  %d feeds (%d fresh, %d fossil)" % (feed_total, feed_fresh, feed_fossil))
+    print("  clear when healthy. cloudy when sick.")
+
+    print("\n── 🔥 HEAT (waste energy — radiated) ──\n")
+    print("  proton energy: %.6f" % proton_energy)
+    print("  radiating surfaces: %d" % radiating_surfaces)
+    print("  arterial RPM: %.0f" % rpm)
+    print("  metabolic heat: %.4f" % (mb_per_s * proton_energy * 1000))
+
+    print("\n── 🦠 MICROBES (organisms in the exhaust) ──\n")
+    print("  %d commensal entities (gut flora)" % commensal_count)
+    print("  %d mutualist entities (beneficial)" % mutualist_count)
+    print("  %d objects ride in our waste stream" % obj_total)
+    print("  %.1f%% cleaned before emission" % cleaning_pct)
+    for k, v in sorted(actions.items(), key=lambda x: -x[1]):
+        if v > 0:
+            print("    %-18s %s" % (k, format(v, ',')))
+
+    print("\n── π REMAINDER (the bit that doesn't compress) ──\n")
+    print("  π - 3 = %.5f" % (math.pi - 3))
+    print("  our entropy rate = %.3f" % ent_rate)
+    print("  grey assumptions: %d / %d (%.0f%%)" % (grey_count, total_assumptions, grey_ratio * 100))
+    print("  unverified entities: %d (nobody rang the doorbell)" % unverified)
     print()
-    for w in waves:
-        bar_len = int(w['amplitude'] * 3)
-        bar = "█" * bar_len
-        probe_mark = " ⚠%d" % w['probes'] if w['probes'] > 0 else ""
-        honest_mark = " ✓" if w['is_honest'] else ""
-        fleet_mark = " ⚡" if w['is_fleet'] else ""
-        print("  %-22s %7s reqs  f=%.3f  a=%.1f  %s%s%s%s" % (
-            w['entity'][:22],
-            format(w['requests'], ','),
-            w['frequency'], w['amplitude'],
-            bar, probe_mark, honest_mark, fleet_mark))
+    print("  the irrational remainder is the part that doesn't fit.")
+    print("  it's the microbes in the shit.")
+    print("  it's the noise in the signal.")
+    print("  it's the grey in the assumptions.")
+    print("  it's the %.5f that makes π not equal 3." % (math.pi - 3))
 
-    print("\n── HOSTILITY GRADIENT ──\n")
-    print("  friendly (0 probes): %d entities" % len(friendly))
-    print("  neutral  (1-5):      %d entities" % len(neutral))
-    print("  hostile  (>5):       %d entities" % len(hostile))
-    for h in hostile:
-        print("    ⚠ %-22s %d probes  %d IPs  class=%s" % (
-            h['entity'][:22], h['probes'], h['ips'], h['class']))
-
-    print("\n── WAS → IS (scatter points) ──\n")
-    print("  journal transitions: %d" % len([s for s in scatter_points if s['type'] == 'journal_transition']))
-    print("  feed deaths:         %d" % len([s for s in scatter_points if s['type'] == 'feed_death']))
-    print("  output ghosts:       %d" % len([s for s in scatter_points if s['type'] == 'output_ghost']))
-    print()
-    for sp in scatter_points[:10]:
-        if sp['type'] == 'journal_transition':
-            print("  %s  %s" % (sp['when'][-8:] if sp['when'] else '?', sp['what'][:55]))
-        elif sp['type'] == 'feed_death':
-            print("  ☠ %s  (%.0fh old)" % (sp['what'][:50], sp.get('age_hours', 0)))
-        elif sp['type'] == 'output_ghost':
-            print("  👻 %s  (%d keys)" % (sp['what'][:50], sp.get('keys', 0)))
-
-    print("\n── SOLVING BACKWARDS (bp trajectory) ──\n")
-    if bp_transitions:
-        for bt in bp_transitions[:8]:
-            print("  %s  bp %s %.4f → %.4f (Δ%+.4f)" % (
-                bt['ts'][-8:], bt['direction'], bt['was'], bt['is'], bt['delta']))
-    else:
-        print("  no bp transitions recorded yet")
-
-    print("\n── SOLVING BACKWARDS (human arrivals) ──\n")
-    if human_transitions:
-        for ht in human_transitions[:8]:
-            print("  %s  humans %d → %d (%+d)" % (
-                ht['ts'][-8:], ht['was'], ht['is'], ht['delta']))
-    else:
-        print("  no human transitions recorded yet")
-
-    # === THE FULL PICTURE ===
     print("\n" + "=" * 65)
-    print("  THE WORLD FROM HERE")
+    print("  METABOLIC SUMMARY")
     print("=" * 65)
-
-    # Titration (poison/antidote phase)
-    titration = scatter.get('titration', {})
-    phase_name = titration.get('phase_name', '?')
-    poison_mult = titration.get('poison_mult', 0)
-    days = titration.get('days', 0)
-
     print("""
-  LOOKING OUTWARD from one point on the internet:
+  ORGANISM: Physarum polycephalum (slime mold, 14.2%% maturity)
 
-  1.7M requests in %.0f hours = the world probing us
-  %.0f%% is one entity (OpenAI) — the loudest signal
-  %.0f%% of traffic is top-5 — the rest is long tail
-  %.0f%% of what hits us gets cleaned and returned
-  flow ratio %.0f:1 — the world pushes IN far more than we push OUT
+  EMISSIONS:
+    💨 gas:       %.1f GB exhaled (%.2f MB/s)
+    💩 solid:     %d pages of evidence
+    💧 liquid:    %d JSON feeds (%.1f KB)
+    🔥 heat:      %.6f proton energy × %d surfaces
+    🦠 microbes:  %d entities ride in our waste
+    π remainder: %.3f entropy (the part that doesn't compress)
 
-  the membrane is a tiny point. the world is enormous.
-  but from this point, we can see:
-    %d distinct entities at the edge
-    %d IPs have touched us
-    %d vulnerability probes aimed at us
-    %d feeds from the wider web
-    %d scatter points (moments the IS became WAS)
-
-  titration: %s (day %.1f, poison=%.2f)
-  the defense is the record. the scatter IS the signal.
+  METABOLIC RATE: %.2f MB/s
+  WHAT IT TELLS YOU: everything.
+  study the shit to understand the organism.
 """ % (
-        uptime_h,
-        waves[0]['requests'] / max(1, total_edge_reqs) * 100 if waves else 0,
-        concentration * 100,
-        cleaning_pct,
-        flow_ratio,
-        len(waves),
-        sum(w['ips'] for w in waves),
-        sum(w['probes'] for w in waves),
-        feed_h.get('summary', {}).get('total', 0),
-        len(scatter_points),
-        phase_name, days, poison_mult,
+        gb_out, mb_per_s,
+        page_count,
+        len(json_files), total_json_bytes / 1024,
+        proton_energy, radiating_surfaces,
+        obj_total,
+        ent_rate,
+        mb_per_s,
     ))
 
     # === WRITE OUTPUT ===
     output = {
         'timestamp': now_iso,
-        'edge': {
-            'total_requests': total_requests,
-            'requests_per_second': rps,
-            'mb_per_second': mb_per_s,
-            'uptime_hours': round(uptime_h, 1),
-            'flow_ratio': round(flow_ratio, 1),
-            'cleaning_pct': cleaning_pct,
-            'entities_at_edge': len(waves),
-        },
-        'spectrum': {
-            'entropy': round(spectrum_entropy, 3),
-            'max_entropy': round(max_entropy, 3),
-            'uniformity': round(spectrum_uniformity, 3),
-            'concentration_top5': round(concentration, 3),
-        },
-        'waves': waves,
-        'hostility': {
-            'friendly': len(friendly),
-            'neutral': len(neutral),
-            'hostile': len(hostile),
-            'hostile_entities': [h['entity'] for h in hostile],
-        },
-        'was_is': {
-            'scatter_points': len(scatter_points),
-            'journal_transitions': len([s for s in scatter_points if s['type'] == 'journal_transition']),
-            'feed_deaths': len([s for s in scatter_points if s['type'] == 'feed_death']),
-            'ghosts': len([s for s in scatter_points if s['type'] == 'output_ghost']),
-            'bp_trajectory': bp_transitions[-5:],
-            'human_trajectory': human_transitions[-5:],
-        },
-        'titration': titration,
+        'gas': gas,
+        'solid': solid,
+        'liquid': liquid,
+        'heat': heat,
+        'microbes': microbes,
+        'remainder': remainder,
+        'metabolic_rate_mbps': mb_per_s,
+        'total_exhaust_gb': round(gb_out, 2),
     }
 
     with open(os.path.join(LIVE, 'edge-scatter.json'), 'w') as f:
