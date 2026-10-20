@@ -499,6 +499,14 @@ cp /opt/membrane/live-terminal/tope-sort-compressed.json "$DD/compressed.json" 2
         "tier": "motor",
         "timeout": 30,
     },
+    {
+        "name": "disk-fossils",
+        "cmd": "python3 /opt/membrane/disk-fossils.py",
+        "reads": [],
+        "writes": ["live-terminal/disk-fossils.json"],
+        "tier": "motor",
+        "timeout": 60,
+    },
 ]
 
 # Gradient thresholds per tier (seconds)
