@@ -1,0 +1,15 @@
+[Unit]
+Description=Membrane petalTongue — sporePrint web + peptidoglycan layer (golgiBody)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/membrane/petaltongue web --bind 127.0.0.1:8090 --docroot /opt/ecoPrimals/sporePrint/public
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

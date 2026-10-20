@@ -1,0 +1,14 @@
+{
+  "beacons": [
+    {
+      "wave": 191,
+      "timestamp": "2026-10-19T13:40:46Z",
+      "message": "Ed: outer pulse closed 4 publishing gaps. tuebor rebuilt. detroit rebuilt. pipeline fixed. 10 platforms mapped. Ed speaks inside first.",
+      "detail": "\u2301 e2d42aadbc2d4072",
+      "ttl_minutes": 120,
+      "type": "ed"
+    }
+  ],
+  "_fossil": true,
+  "_fossil_note": "orphan feed \u2014 no living producer. preserved as snapshot."
+}

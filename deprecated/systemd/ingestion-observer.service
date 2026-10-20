@@ -1,0 +1,8 @@
+[Unit]
+Description=ecoPrimals Ingestion Observer — scatter content sentinel
+After=network.target skunky-ingest.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /opt/membrane/ingestion-observer.py --observe
+TimeoutStartSec=180

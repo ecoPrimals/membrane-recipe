@@ -1,0 +1,118 @@
+{
+  "type": "hard_soft_layers",
+  "ts": "2026-10-19T15:10:57Z",
+  "principle": "hard surface is the wiggly coastline (countable, fractal). soft within is the wavy ozone (density, gradient). the line between can invert. the reverse is the WiFi donut (broadcast pattern, invisible but shaped).",
+  "hard": {
+    "description": "the wiggly coastline \u2014 GPS trace of the outer surface",
+    "total_points": 116,
+    "active": 107,
+    "dead": 9,
+    "bedrock": [
+      "git"
+    ],
+    "crust": [
+      "hud",
+      "antibody",
+      "complement",
+      "macrophage",
+      "lysozyme",
+      "thymus",
+      "interferon",
+      "opsonize",
+      "epitope",
+      "receptor",
+      "antigen",
+      "cytokine",
+      "bloom"
+    ],
+    "character": "fractal, countable, fixed nodes. high RPM, low flow."
+  },
+  "soft": {
+    "description": "the wavy ozone \u2014 flow density between surfaces",
+    "radiating": [
+      "hud",
+      "tuebor",
+      "detroit",
+      "clutch"
+    ],
+    "stuck": 18,
+    "cloud": [
+      "tuebor"
+    ],
+    "ozone": [
+      "detroit",
+      "clutch",
+      "signal",
+      "hypothesis",
+      "sporeprint"
+    ],
+    "wave_shape": "WAVY (cv=0.88, moderate spread)",
+    "character": "gradient, density field, wobbles. high flow, low RPM."
+  },
+  "line": {
+    "description": "the boundary \u2014 where hard meets soft. can INVERT.",
+    "surfaces_at_line": [
+      "lansing",
+      "thesis",
+      "nestgate.io"
+    ],
+    "inversions": {
+      "loss\u2192return": {
+        "from": 0.969,
+        "to": 0.031
+      },
+      "in\u2192out": {
+        "from": 0.962,
+        "to": 0.038
+      },
+      "aperture\u2192occlusion": {
+        "from": 0.967,
+        "to": 0.033
+      },
+      "balance\u2192wobble": {
+        "from": 0.983,
+        "to": 0.017
+      },
+      "selectivity\u2192permeability": {
+        "from": 0.988,
+        "to": 0.012
+      }
+    },
+    "character": "invertible. flip and hard becomes soft, soft becomes hard."
+  },
+  "reverse": {
+    "description": "the WiFi donut \u2014 broadcast pattern in the air",
+    "shape": "INVERTED DONUT",
+    "inner_ring": {
+      "count": 4,
+      "requests": 4483,
+      "type": "mutualists"
+    },
+    "second_ring": {
+      "count": 2,
+      "requests": 131297,
+      "type": "commensals"
+    },
+    "outer_ring": {
+      "count": 4,
+      "requests": 1521480,
+      "type": "parasites"
+    },
+    "beyond": {
+      "count": 1,
+      "requests": 26161,
+      "type": "pathogens"
+    },
+    "null_space": {
+      "count": 5,
+      "requests": 2684079,
+      "type": "unclassified"
+    },
+    "inner_pct": 3.1,
+    "outer_pct": 96.9,
+    "ratio": "31:1 outer to inner",
+    "character": "invisible but shaped. the hole is bigger than the ring. most signal absorbed by outer shell."
+  },
+  "_fossil": true,
+  "_fossil_note": "session diagnostic \u2014 layer analysis completed"
+}

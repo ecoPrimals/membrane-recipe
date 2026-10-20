@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>beacon.primals.eco — Commensal Relay</title>
+<style>
+:root { --bg: #0a0e14; --fg: #e0e0e0; --accent: #4fc3f7; --dim: #666; --border: #1e2530; --green: #81c784; --amber: #c0c060; --purple: #b39ddb; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: "JetBrains Mono", "Fira Code", monospace; background: var(--bg); color: var(--fg); min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 2rem; }
+.container { max-width: 640px; width: 100%; }
+h1 { color: var(--accent); font-size: 1.4rem; margin-bottom: 0.5rem; }
+.subtitle { color: var(--dim); font-size: 0.85rem; margin-bottom: 2rem; }
+.section { background: #111620; border: 1px solid var(--border); border-radius: 6px; padding: 1.2rem; margin-bottom: 1.2rem; }
+.section h2 { color: var(--accent); font-size: 1rem; margin-bottom: 0.8rem; }
+.key-box { background: #0d1117; border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem; font-family: monospace; font-size: 0.8rem; word-break: break-all; color: var(--green); cursor: pointer; position: relative; }
+.key-box:hover { border-color: var(--accent); }
+.key-box::after { content: "click to copy"; position: absolute; right: 8px; top: 8px; font-size: 0.65rem; color: var(--dim); }
+.config { background: #0d1117; border: 1px solid var(--border); border-radius: 4px; padding: 0.8rem; font-size: 0.75rem; line-height: 1.5; color: #b0bec5; white-space: pre; overflow-x: auto; }
+.config .c { color: var(--dim); }
+.config .k { color: var(--accent); }
+.config .v { color: var(--green); }
+.steps { list-style: none; counter-reset: step; }
+.steps li { counter-increment: step; padding: 0.4rem 0; padding-left: 2rem; position: relative; font-size: 0.85rem; color: #b0bec5; }
+.steps li::before { content: counter(step); position: absolute; left: 0; width: 1.4rem; height: 1.4rem; background: var(--border); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; color: var(--accent); }
+.footer { margin-top: 2rem; text-align: center; font-size: 0.7rem; color: var(--dim); line-height: 1.8; }
+.footer a { color: var(--accent); text-decoration: none; }
+.notice { background: #1a1a0d; border: 1px solid #3d3d0a; border-radius: 4px; padding: 0.8rem; font-size: 0.75rem; color: var(--amber); margin-bottom: 1.2rem; }
+.tier { display: flex; gap: 0.5rem; align-items: baseline; margin-bottom: 0.6rem; }
+.tier-badge { display: inline-block; padding: 0.15rem 0.5rem; border-radius: 3px; font-size: 0.65rem; font-weight: bold; text-transform: uppercase; }
+.tier-1 { background: #1a2a1a; color: var(--green); border: 1px solid #2a3a2a; }
+.tier-2 { background: #1a1a2a; color: var(--accent); border: 1px solid #2a2a3a; }
+.tier-3 { background: #2a1a1a; color: #e57373; border: 1px solid #3a2a2a; }
+.tier-desc { font-size: 0.8rem; color: #b0bec5; }
+.dl-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.8rem; }
+.dl-btn { display: block; text-align: center; padding: 0.6rem 0.4rem; background: #0d1117; border: 1px solid var(--border); border-radius: 4px; color: var(--accent); text-decoration: none; font-size: 0.75rem; transition: border-color 0.2s; }
+.dl-btn:hover { border-color: var(--accent); background: #111925; }
+.dl-btn .os { font-size: 0.85rem; font-weight: bold; display: block; margin-bottom: 0.2rem; }
+.dl-btn .arch { font-size: 0.6rem; color: var(--dim); }
+.config-dl { display: inline-block; padding: 0.4rem 1rem; background: #1a2a1a; border: 1px solid #2a3a2a; border-radius: 4px; color: var(--green); text-decoration: none; font-size: 0.75rem; margin-top: 0.6rem; transition: background 0.2s; }
+.config-dl:hover { background: #223322; }
+.cli-box { background: #0d1117; border: 1px solid var(--border); border-radius: 4px; padding: 0.6rem 0.8rem; font-size: 0.7rem; color: var(--green); margin-top: 0.5rem; font-family: monospace; }
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>&#x1F4E1; beacon.primals.eco</h1>
+<p class="subtitle">Commensal Relay &mdash; free sovereign RustDesk relay for good-faith humans</p>
+
+<div class="notice">
+<strong>What this is:</strong> A free RustDesk relay server. Your traffic is end-to-end encrypted &mdash; the relay sees only ciphertext. No analytics, no tracking, no cookies. Use it in peace.
+</div>
+
+<div class="section">
+<h2>&#x1F4E5; Get RustDesk</h2>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.4rem;">Download the official open-source client. Then point it at this relay.</p>
+<div class="dl-grid">
+<a class="dl-btn" href="https://github.com/rustdesk/rustdesk/releases/latest" target="_blank"><span class="os">&#x1F5A5; Linux</span><span class="arch">.deb / .rpm / AppImage / Flatpak</span></a>
+<a class="dl-btn" href="https://github.com/rustdesk/rustdesk/releases/latest" target="_blank"><span class="os">&#x1F4BB; Windows</span><span class="arch">.exe installer</span></a>
+<a class="dl-btn" href="https://github.com/rustdesk/rustdesk/releases/latest" target="_blank"><span class="os">&#x1F34E; macOS</span><span class="arch">.dmg (Intel + Apple Silicon)</span></a>
+<a class="dl-btn" href="https://github.com/rustdesk/rustdesk/releases/latest" target="_blank"><span class="os">&#x1F4F1; Android / iOS</span><span class="arch">Play Store / App Store</span></a>
+</div>
+<p style="font-size:0.65rem; color:var(--dim); margin-top:0.6rem;">RustDesk is open source (AGPL-3.0). We run the relay. You run the client. Neither side has to trust the other &mdash; E2E encryption handles that.</p>
+</div>
+
+<div class="section">
+<h2>&#x26A1; Quick Setup (2 steps)</h2>
+<ol class="steps">
+<li>Open RustDesk &rarr; Settings &rarr; Network &rarr; set <strong>ID/Relay Server</strong> to <code>relay.primals.eco</code></li>
+<li>Set a <strong>permanent password</strong> on your machine (Settings &rarr; Security)</li>
+</ol>
+<p style="margin-top:0.8rem; font-size:0.75rem; color:var(--dim);">That is it. You are connected. No key needed, no account needed.</p>
+</div>
+
+<div class="section">
+<h2>&#x1F511; Server Key (anti-MITM)</h2>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.6rem;">This key verifies you are talking to this relay, not an impersonator. Paste it into <strong>Settings &rarr; Network &rarr; Key</strong>.</p>
+<div class="key-box" id="server-key">utlNOAWUDdV+Q+ifG3zHrQ5HU0FtQnOTHiAnu6prV7Q=</div>
+<p style="font-size:0.65rem; color:var(--dim); margin-top:0.4rem;">If your client shows <em>&ldquo;key mismatch&rdquo;</em> &mdash; clear the old key, paste this one, and restart RustDesk.</p>
+</div>
+
+<div class="section">
+<h2>&#x1F4CB; Pre-Configured Config</h2>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.4rem;">Download the config file and place it at the path for your OS. This sets the relay address <em>and</em> the server key in one step.</p>
+<a class="config-dl" href="/RustDesk2.toml" download>&#x2B07; Download RustDesk2.toml</a>
+<div style="margin-top:0.8rem; font-size:0.7rem; color:#b0bec5;">
+<strong>Config paths by OS:</strong><br>
+<code style="color:var(--green)">Linux</code> &rarr; <code>~/.config/rustdesk/RustDesk2.toml</code><br>
+<code style="color:var(--green)">macOS</code> &rarr; <code>~/Library/Preferences/RustDesk/RustDesk2.toml</code><br>
+<code style="color:var(--green)">Windows</code> &rarr; <code>%APPDATA%\RustDesk\config\RustDesk2.toml</code>
+</div>
+<div style="margin-top:0.6rem; font-size:0.7rem; color:var(--dim);">
+Or from the terminal:
+</div>
+<div class="cli-box">curl -sO https://beacon.primals.eco/RustDesk2.toml</div>
+</div>
+
+<div class="section">
+<h2>&#x1F527; Key Mismatch Fix</h2>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.4rem;">If a gate shows <em>&ldquo;Authentication failed - invalid key&rdquo;</em> in the relay logs:</p>
+<ol class="steps">
+<li>Stop RustDesk on the gate: <code>sudo systemctl stop rustdesk</code></li>
+<li>Download the correct config: <code>curl -sO https://beacon.primals.eco/RustDesk2.toml</code></li>
+<li>Copy to config dir: <code>cp RustDesk2.toml ~/.config/rustdesk/</code></li>
+<li>Delete stale key state: <code>rm -f ~/.config/rustdesk/RustDesk.toml</code></li>
+<li>Restart: <code>sudo systemctl start rustdesk</code></li>
+</ol>
+<p style="margin-top:0.6rem; font-size:0.7rem; color:var(--dim);">The old <code>RustDesk.toml</code> caches a <code>key_confirmed</code> flag. If the server key changed or was never set correctly, this cache prevents re-verification. Deleting it forces a fresh key exchange.</p>
+</div>
+
+<div class="section">
+<h2>&#x1F6E1; Privacy Model</h2>
+<div class="tier"><span class="tier-badge tier-1">Tier 1</span><span class="tier-desc"><strong>Beacon</strong> &mdash; you are here. Open relay, E2E encrypted, no registration.</span></div>
+<div class="tier"><span class="tier-badge tier-2">Tier 2</span><span class="tier-desc"><strong>Family</strong> &mdash; seed-gated access to sovereign mesh services.</span></div>
+<div class="tier"><span class="tier-badge tier-3">Tier 3</span><span class="tier-desc"><strong>Sovereign</strong> &mdash; lineage-verified access to the inner membrane.</span></div>
+<p style="font-size:0.7rem; color:var(--dim); margin-top:0.6rem;">Each tier is nested inside the previous one. The relay does not know which tier you belong to. Trust is earned, not granted.</p>
+</div>
+
+<div class="section">
+<h2>&#x1F512; Trust Model</h2>
+<ol class="steps">
+<li><strong>Your password</strong> &mdash; only you can accept incoming connections to your machine</li>
+<li><strong>End-to-end encryption</strong> &mdash; the relay cannot inspect your sessions</li>
+<li><strong>Rate limits</strong> &mdash; NAT-aware firewall protects the relay from abuse</li>
+<li><strong>Zero knowledge</strong> &mdash; the relay cannot map your ID to anyone else&rsquo;s</li>
+</ol>
+</div>
+
+
+<div class="section">
+<h2>&#x1F4CD; Origin</h2>
+<p style="font-size:0.85rem; color:var(--accent); margin-bottom:0.4rem;"><strong>Lansing, Michigan</strong></p>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.6rem;">We are approximately <strong>here</strong>. This is a zK proof of location &mdash; you know where to find us without knowing exactly where we are. Sharing without it being taken.</p>
+<p style="font-size:0.7rem; color:var(--dim); margin-bottom:0.6rem;">Life operates on consent &mdash; both positive <em>and</em> negative. Impact should be traced from victim to source. The victim is <a href="https://signal.primals.eco" style="color:var(--accent)">signal</a>. The source is <a href="https://beacon.primals.eco" style="color:var(--accent)">beacon</a>.</p>
+<p style="font-size:0.7rem; color:var(--dim);">If you want to find us: <a href="mailto:eco.primal@pm.me" style="color:var(--green)">eco.primal@pm.me</a></p>
+</div>
+
+<div class="section">
+<h2>&#x2692; The Forge</h2>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.4rem;">The source code that runs this membrane is public. The math is published. The tests are there to kill it.</p>
+<p style="font-size:0.75rem; color:#b0bec5; margin-bottom:0.6rem;">Access is selectively permeable &mdash; read is open, write is earned.</p>
+<a class="config-dl" href="https://git.primals.eco/explore/repos" style="background:#1a1a2a; border-color:#2a2a3a;">&#x1F52D; Explore the Forge</a>
+<p style="font-size:0.65rem; color:var(--dim); margin-top:0.5rem;">53 repositories. One seed. In time, one forge.</p>
+</div>
+
+<div class="footer">
+<p>Operated by <a href="https://sporeprint.primals.eco">ecoPrimal</a> &mdash; sovereign infrastructure &mdash; Lansing, Michigan</p>
+<p>No tracking. No cookies. No analytics. Log-based observation only.</p>
+<p style="margin-top: 0.5rem;"><a href="https://hypothesis.primals.eco">hypothesis</a> &middot; <a href="https://signal.primals.eco">signal</a> &middot; <a href="https://detroit.primals.eco">detroit</a></p>
+<p style="margin-top: 0.5rem; font-size: 0.6rem;">The gut doesn&rsquo;t fight the bacteria. It feeds them.</p>
+</div>
+
+</div>
+<script>
+document.getElementById("server-key").addEventListener("click", function() {
+  const key = this.textContent.trim().replace(/click to copy/, "").trim();
+  navigator.clipboard.writeText(key);
+  this.style.borderColor = "#81c784";
+  const after = this.querySelector("::after");
+  setTimeout(() => { this.style.borderColor = ""; }, 1500);
+});
+</script>
+<script defer src="https://hud.primals.eco/js/hud-widget.js"></script>
+</body>
+</html>
+
+<script defer src="https://hud.primals.eco/js/membrane-discuss.js"></script>

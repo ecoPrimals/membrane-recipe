@@ -1,0 +1,16 @@
+[Unit]
+Description=Quorum Phase 1 — Cascade Sense (temporal.cascade with freshness)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/membrane temporal.cascade --source forgejo
+Environment=GATE_NAME=golgiBody
+Environment=FORGEJO_REPO_ROOT=/opt/forgejo/data/repositories
+Environment=MEMBRANE_ZOLA_AUTO_BUILD=0
+User=root
+WorkingDirectory=/opt/ecoPrimals
+TimeoutStartSec=300
+StandardOutput=journal
+StandardError=journal

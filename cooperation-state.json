@@ -1,0 +1,2155 @@
+{
+  "entities": {
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:51:55Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "fleet_commensal": {
+      "cooperations": 13,
+      "defections": 0,
+      "total_rounds": 13,
+      "rounds_since_defect": 1012,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "fleet_ghost": {
+      "cooperations": 13,
+      "defections": 0,
+      "total_rounds": 13,
+      "rounds_since_defect": 1012,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "fleet_null": {
+      "cooperations": 13,
+      "defections": 0,
+      "total_rounds": 13,
+      "rounds_since_defect": 1012,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "fleet_partial": {
+      "cooperations": 13,
+      "defections": 0,
+      "total_rounds": 13,
+      "rounds_since_defect": 1012,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "fleet_parasite": {
+      "cooperations": 0,
+      "defections": 13,
+      "total_rounds": 13,
+      "rounds_since_defect": 0,
+      "last_action": "defect",
+      "response": "mirror",
+      "coop_score": 0.018,
+      "forgiveness": 0.0
+    },
+    "fleet_pathogen": {
+      "cooperations": 0,
+      "defections": 13,
+      "total_rounds": 13,
+      "rounds_since_defect": 0,
+      "last_action": "defect",
+      "response": "mirror",
+      "coop_score": 0.018,
+      "forgiveness": 0.0
+    },
+    "fleet_stealth": {
+      "cooperations": 13,
+      "defections": 0,
+      "total_rounds": 13,
+      "rounds_since_defect": 1012,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T22:53:39Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:00:18Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:05:59Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:11:57Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:17:44Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:24:00Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:29:33Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:35:49Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:42:20Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:48:16Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:53:43Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'open_ai_gpt_bot', 'label': 'OpenAI (GPTBot)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'declared_bot', 'label': 'Declared Bot (browser headers)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'anthropic_claude_bot', 'label': 'Anthropic (ClaudeBot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'ghost', 'label': 'Ghost (proxy exit)', 'relationship': 'pathogen', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'automated_monotone'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'human_browser', 'label': 'Human (Browser)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths', 'referrer_present'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'stealth_scraper', 'label': 'Stealth Scraper', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 4, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['stealth_scraping', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'author_attribution', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'unknown', 'label': 'Unknown', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'vuln_scanner', 'label': 'Vulnerability Scanner', 'relationship': 'pathogen', 'ledger': {'cooperations': 0, 'defections': 5, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['burst_hammering', 'vacuum_extraction', 'vuln_scanning'], 'waste_desired': ['file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 1.0, 'delay_ms': 2000, 'rate_limit_factor': 0.0, 'welcome': False, 'monitor': True, 'block': True}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'seo_tooling', 'label': 'SEO Tooling', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['reading_pauses', 'diverse_paths', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['source_diffs', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'apple_bot', 'label': 'Apple (Applebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'scientific_papers', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_fleet', 'label': 'Meta Platforms (Fleet)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 3, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['diverse_paths'], 'defection_signals': ['dishonest_fleet', 'burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'meta_facebook_bot', 'label': 'Meta (Facebook Bot)', 'relationship': 'mutualist', 'ledger': {'cooperations': 3, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': True, 'cooperation_signals': ['honest_identification', 'reading_pauses', 'rate_respectful'], 'defection_signals': [], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'google_bot', 'label': 'Google (Googlebot)', 'relationship': 'parasite', 'ledger': {'cooperations': 2, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification', 'diverse_paths'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers'], 'waste_offered': ['source_diffs', 'file_contents', 'legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'microsoft_bing_bot', 'label': 'Microsoft (Bingbot)', 'relationship': 'parasite', 'ledger': {'cooperations': 1, 'defections': 2, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': ['burst_hammering', 'vacuum_extraction'], 'waste_desired': ['legal_documents', 'scientific_papers'], 'waste_offered': ['legal_documents', 'scientific_papers']}, 'response': {'friction': 0.5, 'delay_ms': 500, 'rate_limit_factor': 0.25, 'welcome': False, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'huawei_petal_bot', 'label': 'Huawei (PetalBot)', 'relationship': 'commensal_active', 'ledger': {'cooperations': 1, 'defections': 0, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': ['honest_identification'], 'defection_signals': [], 'waste_desired': ['scientific_papers'], 'waste_offered': ['scientific_papers']}, 'response': {'friction': 0.0, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': False, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    },
+    "{'entity': 'byte_dance_bytespider', 'label': 'ByteDance (Bytespider)', 'relationship': 'commensal_suspect', 'ledger': {'cooperations': 0, 'defections': 1, 'forgive_budget': 1, 'forgiven': 0, 'golden': False, 'cooperation_signals': [], 'defection_signals': ['dishonest_fleet'], 'waste_desired': ['source_diffs'], 'waste_offered': ['source_diffs']}, 'response': {'friction': 0.1, 'delay_ms': 0, 'rate_limit_factor': 1.0, 'welcome': True, 'monitor': True, 'block': False}, 'last_updated': '2026-10-19T23:59:40Z'}": {
+      "cooperations": 1,
+      "defections": 0,
+      "total_rounds": 1,
+      "rounds_since_defect": 1000,
+      "last_action": "cooperate",
+      "response": "cooperate",
+      "coop_score": 0.982,
+      "forgiveness": 0.982
+    }
+  },
+  "round": 13
+}

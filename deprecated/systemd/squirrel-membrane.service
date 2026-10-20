@@ -1,0 +1,15 @@
+[Unit]
+Description=squirrel AI coordination (golgiBody)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/membrane/squirrel server --socket /run/membrane/squirrel.sock
+Restart=on-failure
+RestartSec=3
+RuntimeDirectory=membrane
+RuntimeDirectoryPreserve=yes
+Environment=PRIMAL_NAME=chipMonk
+
+[Install]
+WantedBy=multi-user.target

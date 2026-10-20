@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# ntfy push notifications — membrane event relay
+#
+# Lightweight push notification server. Membrane events (human arrivals,
+# opsonize signals, discussion comments) push to subscribed devices.
+#
+# Port: 8098 (localhost only, Caddy terminates TLS at notify.primals.eco)
+
+[Unit]
+Description=ntfy Push Notifications (cellMembrane)
+Documentation=https://ntfy.sh/docs/
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/membrane/ntfy serve --config /etc/membrane/ntfy.yml
+Restart=always
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/membrane/ntfy-data
+
+MemoryMax=64M
+CPUQuota=15%
+
+[Install]
+WantedBy=multi-user.target

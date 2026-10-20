@@ -1,0 +1,16 @@
+[Unit]
+Description=nestGate CAS storage (golgiBody — sporePrint)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/membrane/nestgate server --socket-only --socket /run/membrane/nestgate.sock
+Environment=GATE_NAME=golgiBody
+Environment=NESTGATE_JWT_SECRET=zUYP99fEiapVQFMoyAPogx26SOvexS6cZt6QTNMAP29cOxVtkZA2RNUJiAiROPf5
+Restart=on-failure
+RestartSec=3
+RuntimeDirectory=membrane
+RuntimeDirectoryPreserve=yes
+
+[Install]
+WantedBy=multi-user.target

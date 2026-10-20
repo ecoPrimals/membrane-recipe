@@ -1,0 +1,43 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# Membrane Tower: LoamSpine — Permanence layer (selective memory + certificates)
+#
+# Provenance trio member 2/3. Provides certificate storage, session
+# dehydration, selective memory. Dual protocol: JSON-RPC + tarpc.
+
+[Unit]
+Description=LoamSpine Permanence (Membrane Tower — Certificates + Memory)
+Documentation=https://primals.eco
+After=network-online.target beardog-membrane.service
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStartPre=-/bin/rm -f /run/membrane/loamspine.sock
+ExecStartPre=-/bin/rm -f /run/membrane/loamspine.tarpc.sock
+ExecStart=/opt/membrane/loamspine server \
+    --socket /run/membrane/loamspine.sock
+
+Environment=BIOMEOS_SOCKET_DIR=/run/membrane
+Environment=RUST_LOG=info
+Environment=LOAMSPINE_FAMILY_ID=e8b62b6e
+Environment=LOAMSPINE_DATA_DIR=/var/lib/membrane/loamspine
+EnvironmentFile=-/opt/membrane/tower.env
+
+Restart=always
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/run/membrane /var/lib/membrane/loamspine
+ReadOnlyPaths=/opt/membrane
+
+MemoryMax=128M
+CPUQuota=25%
+
+[Install]
+WantedBy=multi-user.target

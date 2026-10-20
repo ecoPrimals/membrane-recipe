@@ -1,0 +1,34 @@
+{
+  "self": "membrane-relay",
+  "self_wg": "10.13.37.1",
+  "timestamp": "2026-10-14T16:09:01Z",
+  "peers": [
+    {
+      "name": "nucleus",
+      "wg_ip": "10.13.37.16",
+      "role": "dns",
+      "alive": true,
+      "latency_ms": 2.38,
+      "service_ok": false
+    }
+,
+    {
+      "name": "golgiLayerLinode",
+      "wg_ip": "10.13.37.14",
+      "role": "scatter",
+      "alive": true,
+      "latency_ms": 195,
+      "service_ok": true
+    }
+,
+    {
+      "name": "sporeGate",
+      "wg_ip": "10.13.37.2",
+      "role": "gate",
+      "alive": true,
+      "latency_ms": 38.9,
+      "service_ok": false
+    }
+
+  ]
+}

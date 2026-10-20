@@ -1,0 +1,6 @@
+[Unit]
+Description=Enforce git:git ownership on Forgejo repositories
+
+[Service]
+Type=oneshot
+ExecStart=/bin/chown -R git:git /opt/forgejo/data/repositories

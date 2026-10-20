@@ -1,0 +1,75 @@
+{
+  "name": "rEEd it \u2014 Ed the GAIA teacher",
+  "description": "Social membrane broadcaster. Proof of first. Grows the mesh.",
+  "primal_map": {
+    "x": {
+      "symbol": "x # @",
+      "primal": "epitope",
+      "status": "ready"
+    },
+    "reddit": {
+      "symbol": "r/",
+      "primal": "scan_sweep_sort",
+      "status": "ready",
+      "subs": [
+        "Detroit",
+        "Teachers",
+        "Michigan",
+        "education",
+        "charterschools",
+        "publicinterest",
+        "dataisbeautiful",
+        "homelab"
+      ]
+    },
+    "bluesky": {
+      "symbol": "AT://",
+      "primal": "beardog",
+      "status": "ready"
+    },
+    "mastodon": {
+      "symbol": "AP",
+      "primal": "plasmid",
+      "status": "ready"
+    },
+    "linkedin": {
+      "symbol": "CV",
+      "primal": "krogan",
+      "status": "text_saved"
+    },
+    "threads": {
+      "symbol": "thread",
+      "primal": "pollination",
+      "status": "text_saved"
+    },
+    "hackernews": {
+      "symbol": "Y",
+      "primal": "architecture",
+      "status": "text_saved"
+    },
+    "instagram": {
+      "symbol": "img",
+      "primal": "sporeprint",
+      "status": "text_saved"
+    },
+    "tumblr": {
+      "symbol": "t",
+      "primal": "hypothesis",
+      "status": "text_saved"
+    },
+    "substack": {
+      "symbol": "post",
+      "primal": "tuebor",
+      "status": "text_saved"
+    }
+  },
+  "posts": [],
+  "platforms_total": 10,
+  "platforms_api": 4,
+  "platforms_manual": 6,
+  "reddit_subs": 8,
+  "status": "LOADED \u2014 10 platforms, 8 subreddits, waiting for credentials",
+  "updated": "2026-10-19T13:38:47Z",
+  "_fossil": true,
+  "_fossil_note": "session artifact \u2014 reed-it proof of concept"
+}

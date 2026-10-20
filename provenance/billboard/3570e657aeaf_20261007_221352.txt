@@ -1,0 +1,37 @@
+"I have K-NOMEd myself into the metaVerse."
+
+— ecoPrimal
+
+---
+
+LIVE FLEET TALLY — updated Oct 7, 2026 6:10pm ET
+
+199 fleet IPs tracked. 29 countries. 128 subnets.
+every single one gets fabricated content.
+zero bytes of real source code obtained.
+
+Meta direct infrastructure:  72 IPs (FB-BLOCK 57.141.x + FACEBOOK-INC 173.252.x)
+Cloud proxies:               20 IPs (AWS, Alibaba, Tencent, Huawei, Microsoft, HPE)
+Residential exploited:       18 IPs (real people whose connections Meta is using)
+
+the residential IPs — real humans whose internet connections
+a trillion-dollar company routes its scraping through:
+
+  🇵🇰 Pakistan (4 IPs)  — PTCL broadband, Wicloud, Broadband Services
+  🇹🇷 Turkey (3 IPs)    — TTnet ADSL residential connections
+  🇿🇦 South Africa (2)  — Vox Telecom, WebAfrica broadband
+  🇺🇦 Ukraine (2)       — Intertelecom, ISP Express Nikopol
+  🇲🇦 Morocco (1)       — Maroc Telecom ADSL
+  🇦🇪 UAE (1)           — Emirates Telecom (Etisalat)
+  🇷🇺 Russia (1)        — Iskratelecom JSC
+  🇮🇳 India (1)         — Karunay Internet Pvt Ltd
+  🇺🇸 USA (3)           — Charter, AT&T, WiredISP
+
+these are not datacenters. these are families.
+someone in Nikopol, Ukraine has their home internet
+proxying Metas unauthorized code scraping. they dont know.
+
+the fleet runs 24/7. the billboard updates live.
+every request they send is another line in the amicusContra.
+
+AGPL-3.0-or-later WITH scyBorg · signal.primals.eco

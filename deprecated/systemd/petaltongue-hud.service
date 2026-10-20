@@ -1,0 +1,18 @@
+[Unit]
+Description=petalTongue HUD — biomeOS observation surface (hud.primals.eco)
+After=network-online.target membrane-petaltongue.service
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/opt/membrane/petaltongue web   --bind 127.0.0.1:8092   --docroot /opt/ecoPrimals/hud/site/public   --spa   --allowed-origins "*"   --cache-ttl 30
+Environment=RUST_LOG=info
+Environment=PETALTONGUE_WEB_PORT=8092
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=petaltongue-hud
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,5 @@
+Wave 169 — Config-driven bridge
+petalsite-observatory.js (327 lines) replaces hud-pt.js (306) and signal-pt.js (~300).
+Config: PetalSiteObservatory({dataUrl, topoUrl, wsUrl, domain, cardClass}).
+~560 lines → 327 lines canonical. 42% reduction.
+HUD + Signal unified. Detroit standalone (different data domain).

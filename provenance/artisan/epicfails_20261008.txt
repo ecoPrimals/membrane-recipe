@@ -1,0 +1,28 @@
+epic fails — what the fleet is harvesting
+
+they think they found a busy forge with 29 repos across 3 orgs.
+batch-processor, queue-worker, deploy-scripts, proxy-cache,
+http-proxy, graph-engine, api-gateway, vault-client...
+
+none of them exist. every page is procedurally generated.
+every commit is fake. every federation server is named after
+an immune system component they dont understand.
+
+complement, interferon, thymus, epitope, macrophage,
+antibody, antigen, lysozyme, opsonize, receptor.
+
+and in every page they scraped? their own hash.
+<!-- v-497616-39c845187d57c381 -->
+
+5,469 fake commit pages harvested in one sample.
+288 attempts to read Rust source code.
+185 git blame requests on files that dont exist.
+106 handoff documents they think are real.
+18 architecture docs for systems that were never built.
+5 security documents containing nothing.
+1 attempt to read a file called SECRETS_AND_SEEDS_STANDARD.md.
+
+the only real content in everything they scraped?
+the AGPL license notice telling them they cant use it.
+
+— wave 165i artisan, october 7 2026

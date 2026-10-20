@@ -1,0 +1,43 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# Membrane Tower: RhizoCrypt — Ephemeral DAG engine
+#
+# Provenance trio member 3/3. Captures, links, and commits events
+# to permanent storage. Dual protocol: JSON-RPC + tarpc.
+
+[Unit]
+Description=RhizoCrypt DAG Engine (Membrane Tower — Events + Commits)
+Documentation=https://primals.eco
+After=network-online.target beardog-membrane.service
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStartPre=-/bin/rm -f /run/membrane/rhizocrypt.sock
+ExecStartPre=-/bin/rm -f /run/membrane/rhizocrypt.tarpc.sock
+ExecStart=/opt/membrane/rhizocrypt server \
+    --unix /run/membrane/rhizocrypt.sock
+
+Environment=BIOMEOS_SOCKET_DIR=/run/membrane
+Environment=RUST_LOG=info
+Environment=RHIZOCRYPT_FAMILY_ID=e8b62b6e
+Environment=RHIZOCRYPT_DATA_DIR=/var/lib/membrane/rhizocrypt
+EnvironmentFile=-/opt/membrane/tower.env
+
+Restart=always
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/run/membrane /var/lib/membrane/rhizocrypt
+ReadOnlyPaths=/opt/membrane
+
+MemoryMax=128M
+CPUQuota=25%
+
+[Install]
+WantedBy=multi-user.target

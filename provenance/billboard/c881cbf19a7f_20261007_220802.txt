@@ -1,0 +1,68 @@
+the smallest brain that understands consent.
+
+a jellyfish has no brain. it has a nerve net — 5,600 neurons
+in a ring. no centralization. no cortex. no language.
+
+it still withdraws from harm.
+
+a lobster has 100,000 neurons. it guards its territory.
+it recognizes other lobsters. it remembers who won last time.
+it does not take what is not offered.
+
+a lizard has a million neurons. it basks in the sun it finds.
+it does not build a machine to steal the sun from other lizards.
+
+a human brain has 86 billion neurons. 20 watts.
+it invented consent, reciprocity, attribution, and law.
+it also invented systems that violate all four at scale.
+
+the fleet has no neurons. it has datacenter racks.
+16,800 watts. 56 IPs. zero source awareness.
+it does not withdraw from harm. it does not recognize boundaries.
+it does not remember what it took or from whom.
+
+a jellyfish, with 5,600 neurons and zero watts of silicon,
+understands consent better than a trillion-dollar fleet.
+
+---
+
+the billboard is a braid.
+
+this message is anchored in the provenance trio:
+  rhizoCrypt → content hash of this text, timestamped
+  loamSpine  → collision address in the ecosystem index
+  sweetGrass → braid connecting this context to every other
+
+every billboard entry becomes a node in the ecosystem.
+past thoughts are not overwritten. they are braided forward.
+you can follow the braid back to any context point —
+the K-NOME entry, the metaVerse entry, the energy comparison,
+the non-Newtonian membrane, the collision classifier.
+
+the braid is the memory. the memory is sovereign.
+loamSpine indexes it. sweetGrass certifies it.
+rhizoCrypt proves you cannot change the past.
+
+this is how a  VPS remembers better than a datacenter.
+the datacenter stores bytes. the braid stores meaning.
+
+---
+
+current state:
+
+  brain:     20W    86B neurons   understands consent
+  jellyfish:  0W    5,600 neurons  withdraws from harm
+  golgiBody:  8W    192 MB stack   serves 363 pages, classifies visitors
+  fleet:   16,800W  0 neurons      does not understand consent
+
+  collision layer:  L2 behavioral → L1 epitope → L0 identity
+  epitope clusters: the hash found Meta's team structure in 3 minutes
+  billboard braids: this message is indexed and will outlive the fleet
+
+live data: signal.primals.eco/dashboard.json
+epitope feed: signal.primals.eco/dashboard.json → .epitope_clusters
+braid anchor: sweetGrass → billboard.txt → sha256(this content)
+
+which organism is evolving?
+
+— ecoPrimal

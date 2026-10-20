@@ -1,0 +1,368 @@
+{
+  "dimensions": {
+    "scales": 7,
+    "epitopes": 7,
+    "null_forms": 3,
+    "total_cells": 147
+  },
+  "topology": "circle",
+  "pi_cubed_is_origin": true,
+  "note_topology": "the scale is a circle, not a line. \u03c0\u00b3 = O. the edge wraps back to the origin. the bounce crosses (null).",
+  "current_gaze": {
+    "scale": "\u03c0\u207b\u00b3",
+    "scale_name": "observer",
+    "direction": "outward",
+    "bounce": 88,
+    "bracket": "[",
+    "at_origin": false
+  },
+  "occupancy": {
+    "\u03c0\u207b\u00b3": {
+      "INVESTIGATION": {
+        "state": "occupied",
+        "count": 2,
+        "was": 15,
+        "trajectory": "present"
+      },
+      "MEMBRANE": {
+        "state": "occupied",
+        "count": 1,
+        "was": 4,
+        "trajectory": "present"
+      },
+      "SCIENCE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      },
+      "SIGNAL": {
+        "state": "occupied",
+        "count": 1,
+        "was": 1,
+        "trajectory": "present"
+      },
+      "OTHER": {
+        "state": "occupied",
+        "count": 1,
+        "was": 21,
+        "trajectory": "present"
+      },
+      "TOPOLOGY": {
+        "state": "occupied",
+        "count": 8,
+        "was": 56,
+        "trajectory": "present"
+      },
+      "IMMUNE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      }
+    },
+    "\u03c0\u207b\u00b2": {
+      "INVESTIGATION": {
+        "state": "occupied",
+        "count": 2,
+        "was": 15,
+        "trajectory": "present"
+      },
+      "MEMBRANE": {
+        "state": "occupied",
+        "count": 1,
+        "was": 4,
+        "trajectory": "present"
+      },
+      "SCIENCE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      },
+      "SIGNAL": {
+        "state": "occupied",
+        "count": 1,
+        "was": 1,
+        "trajectory": "present"
+      },
+      "OTHER": {
+        "state": "occupied",
+        "count": 1,
+        "was": 21,
+        "trajectory": "present"
+      },
+      "TOPOLOGY": {
+        "state": "occupied",
+        "count": 8,
+        "was": 56,
+        "trajectory": "present"
+      },
+      "IMMUNE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      }
+    },
+    "\u03c0\u207b\u00b9": {
+      "INVESTIGATION": {
+        "state": "occupied",
+        "count": 2,
+        "was": 15,
+        "trajectory": "present"
+      },
+      "MEMBRANE": {
+        "state": "occupied",
+        "count": 1,
+        "was": 4,
+        "trajectory": "present"
+      },
+      "SCIENCE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      },
+      "SIGNAL": {
+        "state": "occupied",
+        "count": 1,
+        "was": 1,
+        "trajectory": "present"
+      },
+      "OTHER": {
+        "state": "occupied",
+        "count": 1,
+        "was": 21,
+        "trajectory": "present"
+      },
+      "TOPOLOGY": {
+        "state": "occupied",
+        "count": 8,
+        "was": 56,
+        "trajectory": "present"
+      },
+      "IMMUNE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      }
+    },
+    "\u03c0\u2070": {
+      "INVESTIGATION": {
+        "state": "occupied",
+        "count": 2,
+        "was": 15,
+        "trajectory": "present"
+      },
+      "MEMBRANE": {
+        "state": "occupied",
+        "count": 1,
+        "was": 4,
+        "trajectory": "present"
+      },
+      "SCIENCE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      },
+      "SIGNAL": {
+        "state": "occupied",
+        "count": 1,
+        "was": 1,
+        "trajectory": "present"
+      },
+      "OTHER": {
+        "state": "occupied",
+        "count": 1,
+        "was": 21,
+        "trajectory": "present"
+      },
+      "TOPOLOGY": {
+        "state": "occupied",
+        "count": 8,
+        "was": 56,
+        "trajectory": "present"
+      },
+      "IMMUNE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      }
+    },
+    "\u03c0\u00b9": {
+      "INVESTIGATION": {
+        "state": "occupied",
+        "count": 2,
+        "was": 15,
+        "trajectory": "present"
+      },
+      "MEMBRANE": {
+        "state": "occupied",
+        "count": 1,
+        "was": 4,
+        "trajectory": "present"
+      },
+      "SCIENCE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      },
+      "SIGNAL": {
+        "state": "occupied",
+        "count": 1,
+        "was": 1,
+        "trajectory": "present"
+      },
+      "OTHER": {
+        "state": "occupied",
+        "count": 1,
+        "was": 21,
+        "trajectory": "present"
+      },
+      "TOPOLOGY": {
+        "state": "occupied",
+        "count": 8,
+        "was": 56,
+        "trajectory": "present"
+      },
+      "IMMUNE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      }
+    },
+    "\u03c0\u00b2": {
+      "INVESTIGATION": {
+        "state": "occupied",
+        "count": 2,
+        "was": 15,
+        "trajectory": "present"
+      },
+      "MEMBRANE": {
+        "state": "occupied",
+        "count": 1,
+        "was": 4,
+        "trajectory": "present"
+      },
+      "SCIENCE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      },
+      "SIGNAL": {
+        "state": "occupied",
+        "count": 1,
+        "was": 1,
+        "trajectory": "present"
+      },
+      "OTHER": {
+        "state": "occupied",
+        "count": 1,
+        "was": 21,
+        "trajectory": "present"
+      },
+      "TOPOLOGY": {
+        "state": "occupied",
+        "count": 8,
+        "was": 56,
+        "trajectory": "present"
+      },
+      "IMMUNE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      }
+    },
+    "\u03c0\u00b3": {
+      "INVESTIGATION": {
+        "state": "occupied",
+        "count": 2,
+        "was": 15,
+        "trajectory": "present"
+      },
+      "MEMBRANE": {
+        "state": "occupied",
+        "count": 1,
+        "was": 4,
+        "trajectory": "present"
+      },
+      "SCIENCE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      },
+      "SIGNAL": {
+        "state": "occupied",
+        "count": 1,
+        "was": 1,
+        "trajectory": "present"
+      },
+      "OTHER": {
+        "state": "occupied",
+        "count": 1,
+        "was": 21,
+        "trajectory": "present"
+      },
+      "TOPOLOGY": {
+        "state": "occupied",
+        "count": 8,
+        "was": 56,
+        "trajectory": "present"
+      },
+      "IMMUNE": {
+        "state": "emitting",
+        "count": 0,
+        "was": 4,
+        "trajectory": "white_hole",
+        "note": "humans passed through \u2014 not null, emitting"
+      }
+    }
+  },
+  "null_counts": {
+    "(null)": 4,
+    "NuLL": 9,
+    "[null]": 2
+  },
+  "ping_pong": {
+    "squirrel_pings": 616,
+    "chipmunk_pongs": 113,
+    "unanswered": 503,
+    "silence_is_data": true,
+    "note": "every unanswered ping is emission \u2014 the null space between ping and pong IS the membrane."
+  },
+  "observer_observing_observer": {
+    "squirrel_watches_chipmunk": true,
+    "chipmunk_watches_squirrel": true,
+    "both_watch_both": true,
+    "who_watches_the_pair": "the membrane \u2014 the null space between watches both. the observer IS the edge.",
+    "reflexive_gap": 0.0813,
+    "note": "the observer observes the observer. the gap approaches zero but never closes."
+  },
+  "inversion": {
+    "observer_position": "0D_1D_edge",
+    "emitting_pores": 14,
+    "note": "the membrane is the null space between particles. emitting pores had humans pass through \u2014 the hat is flipped."
+  }
+}

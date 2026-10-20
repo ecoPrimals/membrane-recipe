@@ -1,0 +1,15 @@
+[Unit]
+Description=Opsonize + Traces — immune tagging + visitor paths (Rust)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/ecoPrimals/opsonize/opsonize-rs
+Restart=always
+RestartSec=5
+WorkingDirectory=/opt/ecoPrimals/opsonize
+StandardOutput=append:/opt/ecoPrimals/logs/opsonize.log
+StandardError=append:/opt/ecoPrimals/logs/opsonize.log
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,150 @@
+{
+  "type": "bounds_scan",
+  "ts": "2026-10-19T15:07:32Z",
+  "principle": "values stuck at 0 or 1 are clamped. invert to see the other side. standardize to [-1,1] to give room to move.",
+  "summary": {
+    "total_at_bounds": 267,
+    "actionable": 46,
+    "dead_zeros": 20,
+    "pegged_ones": 10,
+    "near_ceiling": 9,
+    "near_floor": 7,
+    "bounced_zeros": 10,
+    "contradictions": 10
+  },
+  "inversions": {
+    "description": "near-one values flipped to show the small side",
+    "loss_ratio": {
+      "raw": 0.969,
+      "inverted": 0.031,
+      "meaning": "3.1% returns"
+    },
+    "in_ratio": {
+      "raw": 0.962,
+      "inverted": 0.038,
+      "meaning": "3.8% goes out"
+    },
+    "aperture": {
+      "raw": 0.967,
+      "inverted": 0.033,
+      "meaning": "3.3% occluded"
+    },
+    "balance": {
+      "raw": 0.983,
+      "inverted": 0.017,
+      "meaning": "1.7% wobble"
+    },
+    "selectivity": {
+      "raw": 0.988,
+      "inverted": 0.012,
+      "meaning": "1.2% permeable"
+    },
+    "success_rate": {
+      "raw": 0.956,
+      "inverted": 0.044,
+      "meaning": "4.4% fails"
+    }
+  },
+  "standardized": {
+    "description": "near-zero values mapped to [-1, 1] range",
+    "human_bot_ratio": {
+      "raw": 0.019,
+      "std": -0.962,
+      "meaning": "strongly bot-dominated"
+    },
+    "graph_density": {
+      "raw": 0.005,
+      "std": -0.99,
+      "meaning": "extremely sparse"
+    },
+    "focus": {
+      "raw": 0.27,
+      "std": -0.46,
+      "meaning": "below midpoint, soft"
+    },
+    "turbulence": {
+      "raw": 2.6e-05,
+      "std": -1.0,
+      "meaning": "flatline calm"
+    },
+    "return_ratio": {
+      "raw": 0.031,
+      "std": -0.938,
+      "meaning": "strongly lossy"
+    },
+    "out_ratio": {
+      "raw": 0.038,
+      "std": -0.924,
+      "meaning": "strongly inbound"
+    }
+  },
+  "bounced_zeros": {
+    "description": "zeros that contradict other measurements \u2014 disconnected instruments",
+    "items": [
+      "jitte.tempo=0 but rpm=1692",
+      "jitte.observer_fraction=0 but self-tense exists",
+      "pulse_raw=0 but rpm=1692",
+      "negentropy=0 but 44 feeds fresh",
+      "scatter.mirror=0 but telescope exists",
+      "visitor_stories=0 but visitors arriving",
+      "campfire.human_ips=0 but epitopes sees 24",
+      "round_trip_p=0 but phase=bidirectional",
+      "fold_edges=0 but complexity exists",
+      "genuine_humans=0 but opsonize has 4 signals"
+    ]
+  },
+  "contradictions": [
+    {
+      "a": "mesh_health=1.0",
+      "b": "3/41 alive",
+      "note": "perfect health with 92% dead"
+    },
+    {
+      "a": "sensation=1.0",
+      "b": "focus=0.27",
+      "note": "perfect sensation, blind lens"
+    },
+    {
+      "a": "selectivity_predicted=1.0",
+      "b": "null=29.3%",
+      "note": "perfect prediction, 29% unknown"
+    },
+    {
+      "a": "wake_level=1.0",
+      "b": "jitte=all zeros",
+      "note": "fully awake, no tempo"
+    },
+    {
+      "a": "rpm=1692",
+      "b": "pulse_raw=0",
+      "note": "beating fast, no raw signal"
+    },
+    {
+      "a": "human_epitopes=24",
+      "b": "campfire.humans=0",
+      "note": "different counts"
+    },
+    {
+      "a": "phase=bidirectional",
+      "b": "round_trip_p=0",
+      "note": "bidirectional, no round trips"
+    },
+    {
+      "a": "feeds_fresh=44",
+      "b": "negentropy=0",
+      "note": "writing info, measuring zero"
+    },
+    {
+      "a": "euler=1",
+      "b": "target=2",
+      "note": "mesh has a hole"
+    },
+    {
+      "a": "evolution=1",
+      "b": "running continuously",
+      "note": "learned once, never again"
+    }
+  ],
+  "_fossil": true,
+  "_fossil_note": "session diagnostic \u2014 bounds sweep completed"
+}

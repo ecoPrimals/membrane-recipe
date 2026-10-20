@@ -1,0 +1,117 @@
+{
+  "type": "seo_pollination_audit",
+  "ts": "2026-10-19T15:39:39Z",
+  "indexnow": {
+    "key": "0CB4A351F4F113D99E0E1970B2AA29A6",
+    "sites_with_key": [
+      "tuebor",
+      "detroit",
+      "hud",
+      "sporeprint",
+      "primals.eco"
+    ],
+    "burst_results": {
+      "bing": {
+        "accepted": 4,
+        "rejected": 1,
+        "note": "detroit 403 (key verification lag)"
+      },
+      "yandex": {
+        "accepted": 4,
+        "rejected": 1,
+        "note": "tuebor 403 (cache)"
+      },
+      "naver": {
+        "accepted": 2,
+        "rejected": 3,
+        "note": "works without keyLocation param"
+      }
+    },
+    "tuebor_articles": {
+      "pinged": 43,
+      "total": 50,
+      "accepted": 43
+    },
+    "total_pings": 15,
+    "total_accepted": 10
+  },
+  "discovery_channels": {
+    "atom_rss": {
+      "tuebor": true,
+      "detroit": true,
+      "sporeprint": true,
+      "primals.eco": true,
+      "note": "all 4 content sites have atom+rss"
+    },
+    "sitemaps": {
+      "tuebor": {
+        "exists": true,
+        "urls": 1215
+      },
+      "detroit": {
+        "exists": false,
+        "urls": 0,
+        "DEBT": "needs sitemap"
+      },
+      "hud": {
+        "exists": true,
+        "urls": 0,
+        "DEBT": "empty sitemap"
+      },
+      "sporeprint": {
+        "exists": true,
+        "urls": 499
+      },
+      "primals.eco": {
+        "exists": true,
+        "urls": 0,
+        "DEBT": "empty sitemap"
+      }
+    },
+    "robots_sitemap": {
+      "tuebor": {
+        "has_directive": true,
+        "FIXED": "was pointing to detroit, now correct"
+      },
+      "detroit": {
+        "has_directive": false,
+        "DEBT": "no sitemap directive"
+      },
+      "hud": {
+        "has_directive": false
+      },
+      "sporeprint": {
+        "has_directive": true
+      },
+      "primals.eco": {
+        "has_directive": false
+      }
+    },
+    "jsonld": {
+      "tuebor": 1,
+      "detroit": 1,
+      "hud": 1,
+      "sporeprint": 1,
+      "primals.eco": 0,
+      "note": "primals.eco has no structured data DEBT"
+    },
+    "llms_txt": {
+      "all_sites": true,
+      "note": "all 5 sites serve llms.txt for AI agents"
+    }
+  },
+  "fixes_applied": [
+    "tuebor robots.txt Sitemap pointed to detroit \u2014 fixed to tuebor",
+    "IndexNow key deployed to detroit, hud, primals.eco (galaxy)"
+  ],
+  "remaining_debt": [
+    "detroit needs sitemap.xml",
+    "detroit robots.txt needs Sitemap directive",
+    "hud sitemap is empty (0 URLs)",
+    "primals.eco sitemap is empty (0 URLs)",
+    "primals.eco needs JSON-LD",
+    "detroit Bing IndexNow 403 (key verification lag)"
+  ],
+  "_fossil": true,
+  "_fossil_note": "session diagnostic \u2014 SEO audit completed"
+}

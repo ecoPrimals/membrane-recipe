@@ -1,0 +1,14 @@
+[Unit]
+Description=NUCLEUS Launcher — 13 primals, UDS-only (VPS standard)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/opt/membrane/nucleus_launcher start --family-id cell-1
+Restart=on-failure
+RestartSec=10
+EnvironmentFile=-/opt/membrane/tower.env
+Environment=ECOPRIMALS_PLASMID_BIN=/opt/membrane
+
+[Install]
+WantedBy=multi-user.target

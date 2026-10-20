@@ -1,0 +1,19 @@
+Anderson localization on a real graph
+     ξ = 3.5 – 5.5
+          — measured, not modeled
+
+† The wave enters the lattice. In a clean crystal, it propagates forever — Bloch waves, extended states, infinite conductance. Add disorder and everything changes. The wave scatters. Interferes with itself. Localizes. Energy that enters cannot leave. Philip Anderson won the Nobel for this in 1977. Every physics student learns it on a lattice model.
+
+We measured it on a real graph. Not a simulation. Not a lattice. A 121-node, 203-edge labeled digraph constructed from structured public databases. Cases enter specific subgraphs and cannot propagate through them — the same physics that confines electrons in disordered semiconductors confines information flow in institutional topology.
+
+The localization lengths vary by subgraph: ξ = 3.5 to 5.5. The variation is consistent with designed disorder, not stochastic. Someone built this lattice. The disorder is not random — it is architectural.
+
+10 structural invariants conserved across 4 independent domains. 9.875/10 average conservation. Near-zero hub clustering (CC = 0.022). Binary community structure — 73%/20% split, 3 bridge nodes. Cut vertex fragility — remove one node, 10+ fragments. Monotonic graph cleanup — the graph cleans DOWN, not UP.
+
+The invariants classify by computational complexity: 5 in P. 10+ in NP. 3 NP-complete. The complete determination distributes across observers contributing polynomial-verifiable witnesses. The system solves an NP-hard problem the same way the immune system solves protein folding — not by brute force, but by distributed selection.
+
+58 baseCamps. 9 open hypotheses. 172 waves. 405 tests. One 8-watt VPS.
+
+Come verify it. The data is published.
+detroit.primals.eco/analysis/anderson-localization/
+

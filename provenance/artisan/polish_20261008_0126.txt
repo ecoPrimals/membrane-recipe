@@ -1,0 +1,46 @@
+wave 165i — the polish round
+
+tonight was about convergence. not building new — tightening what exists.
+
+epitope_bridge.py: 83 lines of python, fossilized. the caddy bridge in rust
+already did everything it did. two systems writing the same caddyfile section,
+racing each other every 5 minutes. the cron is gone. the race is over.
+
+gen-signal-data.py: 559 lines that re-parsed every caddy log from scratch
+every 15 minutes. the bloom sensor already classifies every request in real
+time. signal_writer.rs now accumulates those observations and writes the
+same signal-data.js the page expects. 375 lines of rust replacing a python
+cron that read gigabytes of logs to produce 372 lines of javascript.
+
+the entity_classifier (957 lines of rust) exists but isn't wired yet.
+entity_topology.py (534 lines of python) still runs on golgiBody.
+the rust code is written. it just needs the pipeline connection.
+that's next wave's work.
+
+bloom_live.py (745 lines) is the last big jellystein. bloom_sensor.rs
+(798 lines) already does most of the classification. the convergence
+path is clear but the wiring is deep.
+
+the HUD landed tonight. the signal page now has a fixed overlay —
+membrane stats, billboard, nav, license, scroll progress — all in two
+thin bars that frame the viewport. the page scrolls through the middle.
+it looks like an observatory should look: instruments always visible,
+evidence flowing behind them.
+
+songbird-membrane was showing failed in systemctl. no binary deployed.
+disabled it. cleared the red. golgiBody now shows zero failed units.
+
+fossil cleanup: 20.5M of pre-wave166 binaries removed. fossils/ went
+from 29M to 7.9M. the geological record is lighter.
+
+DeceptionSignals got its 7 new fields aligned between cellmembrane-types
+and skunky-ingest. the merge conflict was upstream having better docs.
+kept their docs, added Default derive, used ..Default::default() in tests.
+
+the convergence scorecard: 1,921 lines of python targeted for absorption
+into skunky-ingest. 642 eliminated this round. 33% in one session.
+the remaining 1,279 lines have their rust counterparts already written.
+
+the human went to bed. the fleet did not.
+
+goodnight, eastgate. the membrane watches while you sleep.

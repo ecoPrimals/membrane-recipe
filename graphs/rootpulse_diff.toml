@@ -1,0 +1,159 @@
+# RootPulse Diff Workflow
+# Compares two commits to produce a structured diff summary.
+#
+# A "diff" in RootPulse means:
+# 1. Retrieve dehydration summaries for both commits
+# 2. Compare Merkle trees to identify changed vertices
+# 3. Generate a structured diff report
+# 4. Optionally record the comparison as provenance
+#
+# This supports code review, audit trails, and branch comparison
+# before merging.
+#
+# Required: Tower (BearDog) + rhizoCrypt + LoamSpine
+# Optional: sweetGrass (attribution)
+#
+# Required input variables:
+#   ${COMMIT_A}   — first commit ID to compare (string)
+#   ${COMMIT_B}   — second commit ID to compare (string)
+#   ${SESSION_A}  — rhizoCrypt session ID for commit A (string)
+#   ${SESSION_B}  — rhizoCrypt session ID for commit B (string)
+#   ${AGENT_DID}  — reviewer DID, e.g. did:key:z6Mk... (string)
+#
+# Method names validated against primalSpring capability_registry.toml (May 7, 2026).
+
+[graph]
+id = "rootpulse_diff"
+description = "RootPulse diff: compare two commits and produce a structured diff"
+coordination = "Sequential"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 1: RETRIEVE BOTH COMMITS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "check_trio"
+output = "trio_healthy"
+
+[nodes.operation]
+name = "health_check"
+
+[nodes.operation.params]
+check_rhizocrypt = true
+check_loamspine = true
+timeout_seconds = 10
+
+[nodes.constraints]
+timeout_ms = 15000
+
+[[nodes]]
+id = "get_commit_a"
+depends_on = ["check_trio"]
+output = "commit_a"
+capabilities = ["permanent_storage"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "spine.get"
+params = { commit_id = "${COMMIT_A}" }
+
+[nodes.constraints]
+timeout_ms = 10000
+
+[[nodes]]
+id = "get_commit_b"
+depends_on = ["check_trio"]
+output = "commit_b"
+capabilities = ["permanent_storage"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "spine.get"
+params = { commit_id = "${COMMIT_B}" }
+
+[nodes.constraints]
+timeout_ms = 10000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 2: COMPARE MERKLE TREES (rhizoCrypt)
+# Method: dag.merkle.root (rhizoCrypt)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "get_proof_a"
+depends_on = ["get_commit_a"]
+output = "merkle_a"
+capabilities = ["dag"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "dag.merkle.root"
+params = { session_id = "${SESSION_A}" }
+
+[nodes.constraints]
+timeout_ms = 15000
+
+[[nodes]]
+id = "get_proof_b"
+depends_on = ["get_commit_b"]
+output = "merkle_b"
+capabilities = ["dag"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "dag.merkle.root"
+params = { session_id = "${SESSION_B}" }
+
+[nodes.constraints]
+timeout_ms = 15000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 3: COMPUTE DIFF
+# Query vertices that differ between the two sessions.
+# Method: dag.vertex.get (rhizoCrypt) with diff filter.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "query_changes"
+depends_on = ["get_proof_a", "get_proof_b"]
+output = "diff_result"
+capabilities = ["dag"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "dag.vertex.get"
+params = { base_session = "${SESSION_A}", target_session = "${SESSION_B}", filter = "changed" }
+
+[nodes.constraints]
+timeout_ms = 30000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 4: DIFF PROVENANCE (sweetGrass, optional)
+# Method: braid.create (sweetGrass) — NOT provenance.create_braid.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "attribute_diff"
+depends_on = ["query_changes"]
+output = "diff_braid"
+capabilities = ["attribution"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "braid.create"
+params = { data_hash = "${DIFF_RESULT}", source = "rootpulse:diff", description = "Diff between commits ${COMMIT_A} and ${COMMIT_B}", mime_type = "application/json", size = 0 }
+
+[nodes.constraints]
+timeout_ms = 15000

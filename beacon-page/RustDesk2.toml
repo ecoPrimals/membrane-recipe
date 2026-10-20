@@ -1,0 +1,10 @@
+# RustDesk config for relay.primals.eco
+# Place this at ~/.config/rustdesk/RustDesk2.toml
+# Or import via: Settings → Network → Import Server Config
+
+[options]
+custom-rendezvous-server = 'relay.primals.eco'
+relay-server = 'relay.primals.eco'
+key = 'utlNOAWUDdV+Q+ifG3zHrQ5HU0FtQnOTHiAnu6prV7Q='
+verification-method = 'use-permanent-password'
+allow-remote-config-modification = 'Y'

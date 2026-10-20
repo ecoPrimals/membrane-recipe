@@ -1,0 +1,45 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# Membrane Tower: SweetGrass — Semantic provenance & attribution
+#
+# Provenance trio member 1/3. Provides content-addressed storage,
+# braid attribution, and crypto delegation to bearDog.
+# Dual protocol: JSON-RPC + tarpc (subconscious layer).
+
+[Unit]
+Description=SweetGrass Provenance (Membrane Tower — Attribution + Braids)
+Documentation=https://primals.eco
+After=network-online.target beardog-membrane.service
+Wants=network-online.target
+StartLimitIntervalSec=60
+StartLimitBurst=5
+
+[Service]
+Type=simple
+ExecStartPre=-/bin/rm -f /run/membrane/sweetgrass.sock
+ExecStartPre=-/bin/rm -f /run/membrane/sweetgrass.tarpc.sock
+ExecStart=/opt/membrane/sweetgrass server \
+    --socket /run/membrane/sweetgrass.sock \
+    --storage redb \
+    --storage-path /var/lib/membrane/sweetgrass/braids.redb
+
+Environment=BIOMEOS_SOCKET_DIR=/run/membrane
+Environment=RUST_LOG=info
+Environment=SWEETGRASS_FAMILY_ID=e8b62b6e
+EnvironmentFile=-/opt/membrane/tower.env
+
+Restart=always
+RestartSec=5
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/run/membrane /var/lib/membrane/sweetgrass
+ReadOnlyPaths=/opt/membrane
+
+MemoryMax=128M
+CPUQuota=25%
+
+[Install]
+WantedBy=multi-user.target

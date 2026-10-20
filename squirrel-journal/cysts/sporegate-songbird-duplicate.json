@@ -1,0 +1,44 @@
+{
+  "cyst_id": "sporegate-songbird-duplicate",
+  "created": "2026-10-18T14:30:00Z",
+  "status": "RESOLVED",
+  "symptom": "songbird federation returns empty, eastGate port 7700 not binding",
+  "root_cause_chain": [
+    "sporeGate had TWO songbird services: membrane-songbird (naked, no config) + songbird-gateway (fully configured but duplicate)",
+    "eastGate had THREE songbird spawners: songbird-federation + membrane-nucleus@songbird + Cursor IDE (all competing for sockets)",
+    "Both membrane-songbird and songbird-federation were missing identity config (FAMILY_ID, NODE_ID, PEERS)",
+    "The cyst (songbird-gateway) HAD the correct config — it was the FIX ATTEMPT, not the problem",
+    "eastGate songbird hung on JWT provisioning: biomeos-neural.sock does not implement crypto.generate.jwt_secret, hangs instead of erroring",
+    "beardog.sock returns proper -32601 error, triggering fallback JWT generation",
+    "SECURITY_PROVIDER_SOCKET=/path/to/beardog.sock bypasses the biomeos-neural auto-discovery"
+  ],
+  "treatment": {
+    "sporegate": [
+      "Encapsulated songbird-gateway.service (stopped+disabled) as cyst",
+      "Created drop-in mesh-identity.conf for membrane-songbird.service with config transplanted FROM the cyst",
+      "membrane-songbird restarted with full identity"
+    ],
+    "eastgate": [
+      "Created drop-in mesh-identity.conf for songbird-federation.service",
+      "Added --security-socket to service unit pointing at beardog.sock",
+      "Set SECURITY_PROVIDER_SOCKET=beardog.sock to bypass biomeos-neural JWT hang",
+      "Stopped+disabled membrane-nucleus@songbird (third spawner)",
+      "Killed naked Cursor-spawned songbird processes"
+    ]
+  },
+  "verification": {
+    "eastgate_port_7700": "BOUND",
+    "eastgate_mesh_peers": 2,
+    "eastgate_mesh_paths": {"local": 1, "overlay": 1},
+    "sporegate_mesh_peers": 6,
+    "sporegate_ports": "7700 + 7780 + 8091",
+    "federation_mode": "enabled on both"
+  },
+  "diagnostic_law": "The cyst is the VICTIM. The cyst (songbird-gateway) had the correct config. The running service was the one that was broken. The wall we built around the cyst was the diagnostic instrument — it told us what the real service was missing.",
+  "signal_beacon_pairs": [
+    "SIGNAL: empty federation response → BEACON: cyst config had all the missing env vars",
+    "SIGNAL: port 7700 not binding → BEACON: JWT provisioning hanging on biomeos-neural.sock",
+    "SIGNAL: fd exhaustion (os error 24) → BEACON: nucleus@songbird spawning duplicate naked processes",
+    "SIGNAL: beardog returns -32601 → BEACON: fallback JWT works, the provider matters"
+  ]
+}

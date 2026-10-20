@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-10-19T16:43:13.653371Z",
+  "type": "artisan-footnotes",
+  "description": "Cross-site connective tissue \u2014 the artisan footnotes knitted into the weave",
+  "scripts": {
+    "footer_ring": {
+      "url": "hud.primals.eco/js/footer-ring.js",
+      "purpose": "14-surface navigation ring: investigation + science + membrane",
+      "loaded_by": [
+        "tuebor",
+        "detroit",
+        "sporePrint",
+        "hypothesis",
+        "clutch",
+        "signal"
+      ],
+      "status": "woven"
+    },
+    "hud_widget": {
+      "url": "hud.primals.eco/js/hud-widget.js",
+      "purpose": "shared observation bar across all sites",
+      "loaded_by": [
+        "tuebor",
+        "sporePrint",
+        "hypothesis",
+        "clutch",
+        "signal",
+        "detroit"
+      ],
+      "status": "woven"
+    },
+    "braid_tracker": {
+      "url": "hud.primals.eco/js/braid-tracker.js",
+      "purpose": "consent-inverted braid marks \u2014 the mark asks, the walker answers",
+      "symlink_to": "braid-mailbox.js",
+      "loaded_by": [
+        "tuebor",
+        "detroit",
+        "sporePrint",
+        "hypothesis",
+        "clutch",
+        "signal"
+      ],
+      "status": "woven (was broken 404, fixed via symlink)"
+    },
+    "membrane_discuss": {
+      "url": "hud.primals.eco/js/membrane-discuss.js",
+      "purpose": "sovereign discussion widget \u2014 replaces giscus",
+      "loaded_by": [
+        "tuebor",
+        "sporePrint"
+      ],
+      "status": "woven (was 404, fixed by copying to public/js/)"
+    },
+    "neutron": {
+      "url": "hud.primals.eco/js/neutron.js",
+      "purpose": "messaging axis \u2014 adaptive polling tied to RPM",
+      "loaded_by": [
+        "footer-ring (internal)"
+      ],
+      "status": "woven"
+    }
+  },
+  "billboards": {
+    "data_braids": {
+      "location": "tuebor.primals.eco/braid/",
+      "count": 28,
+      "type": "per-entity evidence braids with Shannon entropy + immune pressure",
+      "status": "live (all 200)",
+      "cross_links": [
+        "detroit.primals.eco/network/"
+      ]
+    },
+    "braid_explorer": {
+      "location": "hud.primals.eco/braid/",
+      "type": "interactive braid walker",
+      "status": "live"
+    },
+    "graph_view": {
+      "location": "hud.primals.eco/graph/",
+      "type": "neural API live composition graph",
+      "status": "live"
+    },
+    "live_vitals": {
+      "location": "hud.primals.eco/live/",
+      "type": "membrane vitals dashboard",
+      "status": "live"
+    },
+    "neutron_views": {
+      "location": "hud.primals.eco/neutron/",
+      "count": 9,
+      "pages": [
+        "board",
+        "channels",
+        "circulatory",
+        "core",
+        "footprint",
+        "globe",
+        "helix",
+        "index",
+        "invite"
+      ],
+      "status": "live"
+    },
+    "connect_page": {
+      "location": "hud.primals.eco/connect.html",
+      "type": "MCP agent connection instructions",
+      "status": "live"
+    }
+  },
+  "fixes_applied": [
+    "braid-tracker.js: symlinked to braid-mailbox.js (was 404 on clutch + sporePrint)",
+    "membrane-discuss.js: copied to public/js/ (was 404 from hud root)",
+    "hud-widget.js: added to detroit template (was missing)",
+    "braid-tracker.js: added to tuebor, detroit, hypothesis, signal templates",
+    "footer-ring.js: added to signal template (was missing)",
+    "footer-ring.js: already present in tuebor, detroit, sporePrint, hypothesis, clutch"
+  ],
+  "weave_coverage": {
+    "fully_woven": [
+      "tuebor",
+      "detroit",
+      "sporePrint",
+      "hypothesis",
+      "clutch",
+      "signal"
+    ],
+    "hud_native": [
+      "hud"
+    ],
+    "not_template_based": [
+      "live",
+      "mesh",
+      "barry",
+      "gorilla",
+      "git",
+      "neutron"
+    ],
+    "total_surfaces": 14,
+    "woven_surfaces": 7,
+    "coverage_pct": 50.0
+  },
+  "_fossil": true,
+  "_fossil_note": "session artifact \u2014 cross-site connector map"
+}

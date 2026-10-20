@@ -1,0 +1,48 @@
+# SPDX-License-Identifier: AGPL-3.0-or-later
+#
+# swarmVine — epidemic gossip engine for the Tower Atomic mesh
+#
+# Completes the gossip layer for golgiBody. Provides UDS socket for
+# local gossip.inject/query from skunkBat and other primals, plus
+# TCP :7800 for cross-gate gossip federation via songBird.
+#
+# Socket at /run/membrane/swarmvine.sock — skunkBat dispatch_gossip.rs
+# discovers this via the hardcoded production fallback path.
+#
+# Part of the Tower Atomic triad communication layer.
+# Gossip domains: tower, data, compute, defense
+
+[Unit]
+Description=swarmVine — epidemic gossip engine (Membrane Tower — Gossip Mesh)
+Documentation=https://primals.eco
+After=network-online.target beardog-membrane.service songbird-membrane.service
+Wants=network-online.target
+Requires=beardog-membrane.service
+
+[Service]
+Type=simple
+ExecStartPre=-/bin/rm -f /run/membrane/swarmvine.sock /run/membrane/swarmvine.tarpc.sock
+ExecStart=/opt/membrane/swarmvine \
+    --family-id default \
+    --gate-id golgiBody \
+    --gossip-port 7800 \
+    --evict-interval 120 \
+    --spread-interval 30
+
+Environment=GATE_ID=golgiBody
+Environment=BIOMEOS_RUNTIME_DIR=/run/membrane
+Environment=BIOMEOS_SOCKET_DIR=/run/membrane
+Environment=RUST_LOG=info
+EnvironmentFile=-/opt/membrane/tower.env
+
+Restart=always
+RestartSec=5
+MemoryMax=64M
+CPUQuota=25%
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=swarmvine
+
+[Install]
+WantedBy=multi-user.target

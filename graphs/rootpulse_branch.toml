@@ -1,0 +1,128 @@
+# RootPulse Branch Workflow
+# Creates a new branch from an existing commit point in the provenance history.
+#
+# A "branch" in RootPulse means:
+# 1. Fork the rhizoCrypt DAG from a specific commit's dehydration summary
+# 2. Create a new LoamSpine spine (linear history) rooted at that commit
+# 3. Future commits on this branch append to the new spine
+#
+# The parent commit and branch metadata are recorded in a sweetGrass braid
+# for full branch provenance.
+#
+# Required: Tower (BearDog + Songbird) + rhizoCrypt + LoamSpine
+# Optional: sweetGrass (attribution)
+#
+# Required input variables:
+#   ${PARENT_COMMIT_ID} — commit ID to branch from (string)
+#   ${BRANCH_NAME}      — human-readable branch name (string)
+#   ${AGENT_DID}        — creator DID, e.g. did:key:z6Mk... (string)
+#
+# Method names validated against primalSpring capability_registry.toml (May 7, 2026).
+
+[graph]
+id = "rootpulse_branch"
+description = "RootPulse branch: fork history at a commit point into a new spine"
+coordination = "Sequential"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 1: VALIDATE SOURCE COMMIT
+# Verify the parent commit exists via LoamSpine session.state.
+# Method: session.state (LoamSpine)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "check_trio"
+output = "trio_healthy"
+capabilities = ["dag", "permanent_storage"]
+
+[nodes.operation]
+name = "health_check"
+
+[nodes.operation.params]
+check_rhizocrypt = true
+check_loamspine = true
+timeout_seconds = 10
+
+[nodes.constraints]
+timeout_ms = 15000
+
+[[nodes]]
+id = "verify_source_commit"
+depends_on = ["check_trio"]
+output = "source_commit"
+capabilities = ["permanent_storage"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "session.state"
+params = { session_id = "${PARENT_COMMIT_ID}" }
+
+[nodes.constraints]
+timeout_ms = 10000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 2: CREATE NEW SESSION (rhizoCrypt)
+# Fork a new ephemeral workspace from the parent state.
+# Method: dag.session.create (rhizoCrypt)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "create_branch_session"
+depends_on = ["verify_source_commit"]
+output = "branch_session"
+capabilities = ["dag"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "dag.session.create"
+params = { metadata = { type = "branch", parent_commit = "${PARENT_COMMIT_ID}", branch_name = "${BRANCH_NAME}" } }
+
+[nodes.constraints]
+timeout_ms = 10000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 3: CREATE NEW SPINE (LoamSpine)
+# A new linear history rooted at the parent commit.
+# Method: spine.create (LoamSpine)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "create_branch_spine"
+depends_on = ["verify_source_commit"]
+output = "branch_spine"
+capabilities = ["permanent_storage"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "spine.create"
+params = { name = "${BRANCH_NAME}", root_commit = "${PARENT_COMMIT_ID}", metadata = { type = "branch", created_by = "${AGENT_DID}" } }
+
+[nodes.constraints]
+timeout_ms = 15000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 4: RECORD BRANCH PROVENANCE (sweetGrass, optional)
+# Method: braid.create (sweetGrass) — NOT provenance.create_braid.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "attribute_branch"
+depends_on = ["create_branch_session", "create_branch_spine"]
+output = "branch_braid"
+capabilities = ["attribution"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "braid.create"
+params = { data_hash = "${PARENT_COMMIT_ID}", source = "rootpulse:branch", description = "Branch '${BRANCH_NAME}' from commit ${PARENT_COMMIT_ID}", mime_type = "application/json", size = 0 }
+
+[nodes.constraints]
+timeout_ms = 15000

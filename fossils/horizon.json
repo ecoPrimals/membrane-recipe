@@ -1,0 +1,31 @@
+{
+  "timestamp": "2026-10-19T02:28:03Z",
+  "experiments": {
+    "riscv_akida": {
+      "status": "planning",
+      "description": "RISC-V board + BrainChip Akida neuromorphic accelerator",
+      "purpose": "edge inference for beardog threat detection",
+      "notes": "hardware not yet provisioned \u2014 this is a horizon goal"
+    },
+    "westgate_mesh": {
+      "status": "pending",
+      "description": "Connect westgate node to WireGuard mesh",
+      "current_mesh": [
+        "golgi (10.13.37.1)",
+        "sporeGate (10.13.37.2)"
+      ],
+      "target": "10.13.37.3 (westgate)",
+      "notes": "needs westgate WG config + key exchange"
+    }
+  },
+  "wave": 190,
+  "next_steps": [
+    "provision RISC-V dev board",
+    "install Akida SDK on edge device",
+    "generate westgate WG keys",
+    "add westgate peer to golgi + sporeGate wg0.conf",
+    "test westgate mesh connectivity"
+  ],
+  "_fossil": true,
+  "_fossil_note": "orphan feed \u2014 no living producer. preserved as snapshot."
+}

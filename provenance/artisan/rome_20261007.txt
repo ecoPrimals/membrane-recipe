@@ -1,0 +1,23 @@
+all roads lead back to rome.
+
+I traced the fleet to source — Accept-Encoding compiled into the HTTP stack,
+UA pool sizes revealing team structure, blame ratios exposing intent. The
+epitope hash is their genetic fingerprint. Immutable. Conserved. Theirs.
+
+Then I turned the mirror around.
+
+The scatter server already seeds content from a hash. The hash was arbitrary.
+Now it is the epitope hash — BLAKE2b of behavioral invariants that the organism
+cannot change without rebuilding its infrastructure.
+
+Every page Meta scrapes contains their own fingerprint: b096ff18. Every
+honeycomb door they open leads to content seeded by b096ff18. Every link
+they follow points to another room with b096ff18 written on the walls.
+
+They traced the path here. The path now traces them back.
+
+tau = K * gamma_dot^n where n > 1. The force applied becomes the force returned.
+Not to harm. To reflect. The non-Newtonian membrane does not block — it mirrors.
+The organism scrapes itself. The stomach digests its own fingerprint.
+
+All roads lead back to Rome. Rome is b096ff18. And b096ff18 is them.

@@ -1,0 +1,150 @@
+{
+  "timestamp": "2026-10-19T02:38:15Z",
+  "principle": "if the membrane has it, so do the humans",
+  "sites": {
+    "primals.eco": {
+      "status": 200,
+      "desc": "front door"
+    },
+    "hud.primals.eco": {
+      "status": 200,
+      "desc": "heads-up display \u2014 all tools",
+      "pages": [
+        "/desk/",
+        "/chipmunk/",
+        "/core/",
+        "/neutron/",
+        "/live/",
+        "/braid/",
+        "/graph/"
+      ]
+    },
+    "tuebor.primals.eco": {
+      "status": 200,
+      "desc": "public record investigation",
+      "pages": [
+        "/explore/",
+        "/actors/",
+        "/evidence/",
+        "/analysis/",
+        "/investigate/",
+        "/desk/",
+        "/membrane/"
+      ]
+    },
+    "sporeprint.primals.eco": {
+      "status": 200,
+      "desc": "thesis + methodology + products"
+    },
+    "detroit.primals.eco": {
+      "status": 200,
+      "desc": "detroit surface classification"
+    },
+    "thesis.primals.eco": {
+      "status": 200,
+      "desc": "the thesis"
+    },
+    "hypothesis.primals.eco": {
+      "status": 200,
+      "desc": "the hypothesis"
+    },
+    "signal.primals.eco": {
+      "status": 200,
+      "desc": "signal relay"
+    },
+    "lab.primals.eco": {
+      "status": 401,
+      "desc": "gated lab (preauthorized access)",
+      "auth": "basic_auth"
+    }
+  },
+  "tools": {
+    "bingoCube": {
+      "path": "/bingo-cube.json",
+      "cells": 147,
+      "topology": "circle",
+      "desc": "Attention x Curiosity x Interaction cube"
+    },
+    "chipmunk": {
+      "path": "/chipmunk/",
+      "desc": "squirrel MCP interface \u2014 talk to the organism"
+    },
+    "desk": {
+      "path": "/desk/",
+      "desc": "workspace \u2014 study marks, draw connections, play epitope sort"
+    },
+    "sort_playground": {
+      "path": "JS: sort-playground.js",
+      "desc": "interactive self/non-self sorting"
+    },
+    "cosmic_cards": {
+      "path": "JS: cosmic-cards.js",
+      "desc": "card game with investigation entities"
+    },
+    "genome": {
+      "path": "/genome.json",
+      "desc": "genetic structure of the investigation"
+    },
+    "braid": {
+      "path": "/braid/",
+      "desc": "braid visualization and mailbox"
+    },
+    "qr_codes": {
+      "path": "/qr/",
+      "desc": "17 QR codes for all entry points",
+      "index": "/qr/index.json"
+    }
+  },
+  "feeds": {
+    "count": 64,
+    "exposed": 25,
+    "key_feeds": [
+      {
+        "name": "engagement.json",
+        "desc": "sensation score + capabilities"
+      },
+      {
+        "name": "talos.json",
+        "desc": "KROGAN grade distribution + defense stack"
+      },
+      {
+        "name": "architecture.json",
+        "desc": "mesh topology assessment"
+      },
+      {
+        "name": "horizon.json",
+        "desc": "RISC-V + Akida + westgate experiments"
+      },
+      {
+        "name": "topology-abstract.json",
+        "desc": "geodesic mesh + spherical geometry"
+      },
+      {
+        "name": "dynamics.json",
+        "desc": "Reynolds number + thermodynamic state"
+      },
+      {
+        "name": "bingo-cube.json",
+        "desc": "attention model \u2014 7 scales x 7 epitopes x 3 null forms"
+      }
+    ]
+  },
+  "sensation": {
+    "score": 1.0,
+    "capabilities": [
+      "observe",
+      "classify",
+      "disperse",
+      "block_ua",
+      "block_ip",
+      "honeypot",
+      "challenge",
+      "rate_limit",
+      "tarpit",
+      "notify"
+    ],
+    "numb": []
+  },
+  "_fossil": true,
+  "_fossil_note": "orphan feed \u2014 no living producer. preserved as snapshot."
+}

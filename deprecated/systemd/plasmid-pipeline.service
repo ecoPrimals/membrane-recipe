@@ -1,0 +1,28 @@
+# plasmid-pipeline.service — Zero-touch cascade + deploy from depot
+# Triggered by plasmid-pipeline.timer or manually via systemctl start
+#
+# Architecture (Wave 111): VPS runs temporal.cascade which:
+# 1. Pulls upstream repos (wateringHole, plasmidBin)
+# 2. Auto-fetches fresh binaries from depot
+# 3. Auto-rebuilds stale binaries when MEMBRANE_AUTO_REBUILD=1
+# 4. Publishes freshness.toml
+[Unit]
+Description=Plasmid Pipeline — temporal cascade + depot refresh
+After=network-online.target
+Wants=network-online.target
+ConditionPathExists=/opt/membrane/membrane
+
+[Service]
+Type=oneshot
+ExecStart=/opt/membrane/membrane temporal.cascade --with-rebuild
+Environment=PLASMIDBIN_DEPOT=/opt/plasmidBin
+Environment=MEMBRANE_INSTALL_BASE=/opt/membrane
+Environment=ECOPRIMALS_ROOT=/opt/ecoPrimals
+Environment=MEMBRANE_AUTO_REBUILD=1
+Environment=FORGEJO_SSH_HOST=git.primals.eco:2222
+Environment=HOME=/root
+SuccessExitStatus=1
+TimeoutStartSec=600
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=plasmid-pipeline

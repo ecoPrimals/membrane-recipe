@@ -1,0 +1,19 @@
+[Unit]
+Description=Membrane Webhook Listener (CI-EVO-01)
+After=network.target forgejo.service
+Wants=forgejo.service
+
+[Service]
+Type=simple
+User=root
+Group=root
+EnvironmentFile=/etc/membrane/secrets/webhook_env
+ExecStart=/opt/membrane/membrane webhook.listen
+Restart=on-failure
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=membrane-webhook
+
+[Install]
+WantedBy=multi-user.target

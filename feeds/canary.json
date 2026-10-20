@@ -1,0 +1,15 @@
+{
+  "type": "canary",
+  "status": "red",
+  "ts": "2026-10-20T00:02:05+00:00",
+  "alerts": [{"site":"hud","issue":"HEAD 1f4c06b7 behind origin 8d335308","ts":"2026-10-20T00:02:05+00:00"}],
+  "checks": {
+    "tuebor_head": "2f760aa",
+    "tuebor_built": "2f760aae03b3",
+    "detroit_head": "bd8df17",
+    "detroit_built": "bd8df177285b",
+    "hud_head": "1f4c06b",
+    "stale_locks": 0,
+    "cron_procs": 3
+  }
+}

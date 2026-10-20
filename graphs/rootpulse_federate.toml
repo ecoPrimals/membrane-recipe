@@ -1,0 +1,185 @@
+# RootPulse Federate Workflow
+# Synchronizes provenance history between nodes via Songbird discovery
+# and Plasmodium collective coordination.
+#
+# Federation in RootPulse means:
+# 1. Discover peer nodes via Songbird
+# 2. Exchange spine tips (what each node has committed)
+# 3. Fetch missing entries from peers
+# 4. Verify and append foreign entries to local spine
+# 5. Record the federation event with provenance
+#
+# This enables multi-node RootPulse where different developers or
+# systems can independently commit to their own spines and then
+# synchronize via federation.
+#
+# Required: Tower (BearDog + Songbird) + LoamSpine
+# Optional: rhizoCrypt (session verification), sweetGrass (attribution)
+#
+# Required input variables:
+#   ${SPINE_ID}      — local spine ID to synchronize (string)
+#   ${AGENT_DID}     — federator DID, e.g. did:key:z6Mk... (string)
+#
+# Output variables produced:
+#   ${PEER_COUNT}      — number of peers discovered (integer)
+#   ${ENTRIES_SYNCED}  — number of entries synchronized (integer)
+#
+# Method names validated against primalSpring capability_registry.toml (May 7, 2026).
+
+[graph]
+id = "rootpulse_federate"
+description = "RootPulse federation: synchronize provenance across peer nodes"
+coordination = "Sequential"
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 1: DISCOVER PEERS
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "check_network"
+output = "network_healthy"
+capabilities = ["discovery"]
+
+[nodes.operation]
+name = "rpc_call"
+target = "songbird"
+
+[nodes.operation.params]
+method = "health"
+params = {}
+
+[nodes.constraints]
+timeout_ms = 5000
+
+[[nodes]]
+id = "discover_peers"
+depends_on = ["check_network"]
+output = "peer_list"
+capabilities = ["discovery"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "discovery.find_primals"
+params = { capability = "permanent_storage", min_peers = 1, timeout_ms = 10000 }
+
+[nodes.constraints]
+timeout_ms = 15000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 2: EXCHANGE TIPS
+# Get the local spine tip and request tips from all discovered peers.
+# Method: entry.get (LoamSpine) for local tip.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "get_local_tip"
+depends_on = ["check_network"]
+output = "local_tip"
+capabilities = ["permanent_storage"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "entry.get"
+params = { spine_id = "${SPINE_ID}", position = "tip" }
+
+[nodes.constraints]
+timeout_ms = 10000
+
+[[nodes]]
+id = "request_peer_tips"
+depends_on = ["discover_peers"]
+output = "peer_tips"
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "network.beacon_exchange"
+params = { peers = "${PEER_LIST}", payload = { type = "tip_exchange", spine_id = "${SPINE_ID}", local_tip = "${LOCAL_TIP}" } }
+
+[nodes.constraints]
+timeout_ms = 30000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 3: FETCH MISSING ENTRIES
+# Compare tips and fetch entries the local node doesn't have.
+# Method: spine.get (LoamSpine)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "compute_missing"
+depends_on = ["get_local_tip", "request_peer_tips"]
+output = "missing_entries"
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "spine.get"
+params = { spine_id = "${SPINE_ID}", action = "diff", local_tip = "${LOCAL_TIP}", peer_tips = "${PEER_TIPS}" }
+
+[nodes.constraints]
+timeout_ms = 15000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 4: VERIFY AND APPEND
+# Verify signatures on foreign entries and append to local spine.
+# Methods: crypto.verify (BearDog), entry.append (LoamSpine)
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "verify_foreign_entries"
+depends_on = ["compute_missing"]
+output = "verified_entries"
+capabilities = ["crypto"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "crypto.verify"
+params = { entries = "${MISSING_ENTRIES}" }
+
+[nodes.constraints]
+timeout_ms = 30000
+
+[[nodes]]
+id = "append_verified"
+depends_on = ["verify_foreign_entries"]
+output = "appended"
+capabilities = ["permanent_storage"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "entry.append"
+params = { spine_id = "${SPINE_ID}", entries = "${VERIFIED_ENTRIES}", source = "federation" }
+
+[nodes.constraints]
+timeout_ms = 30000
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# PHASE 5: FEDERATION PROVENANCE (sweetGrass, optional)
+# Method: braid.create (sweetGrass) — NOT provenance.create_braid.
+# ═══════════════════════════════════════════════════════════════════════════════
+
+[[nodes]]
+id = "attribute_federation"
+depends_on = ["append_verified"]
+output = "federation_braid"
+capabilities = ["attribution"]
+
+[nodes.operation]
+name = "capability_call"
+
+[nodes.operation.params]
+capability = "braid.create"
+params = { data_hash = "${APPENDED}", source = "rootpulse:federate", description = "Federation sync for spine ${SPINE_ID} with ${PEER_COUNT} peers, ${ENTRIES_SYNCED} entries", mime_type = "application/json", size = 0 }
+
+[nodes.constraints]
+timeout_ms = 15000

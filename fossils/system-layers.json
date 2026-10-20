@@ -1,0 +1,287 @@
+{
+  "timestamp": "2026-10-18T23:38:27Z",
+  "wave": 188,
+  "layers": [
+    {
+      "id": 0,
+      "name": "silicon",
+      "description": "physical hardware",
+      "nodes": [
+        {
+          "name": "golgi",
+          "cores": 1,
+          "ram_mb": 1967,
+          "disk_gb": 9.7,
+          "role": "relay"
+        },
+        {
+          "name": "eastgate",
+          "cores": 8,
+          "ram_mb": 32000,
+          "disk_gb": 500,
+          "role": "gate"
+        },
+        {
+          "name": "sporeGate",
+          "cores": 12,
+          "ram_mb": 27000,
+          "disk_gb": 500,
+          "role": "gate"
+        },
+        {
+          "name": "golgiLayer",
+          "cores": 1,
+          "ram_mb": 1024,
+          "disk_gb": 25,
+          "role": "overlay"
+        }
+      ],
+      "total_cores": 22,
+      "total_ram_gb": 61
+    },
+    {
+      "id": 1,
+      "name": "network",
+      "description": "WireGuard mesh + LAN + WAN",
+      "links": [
+        {
+          "from": "golgi",
+          "to": "eastgate",
+          "rtt_ms": 38,
+          "type": "WG"
+        },
+        {
+          "from": "golgi",
+          "to": "sporeGate",
+          "rtt_ms": 38,
+          "type": "WG"
+        },
+        {
+          "from": "eastgate",
+          "to": "sporeGate",
+          "rtt_ms": 0.4,
+          "type": "LAN"
+        },
+        {
+          "from": "golgi",
+          "to": "golgiLayer",
+          "rtt_ms": 227,
+          "type": "WG"
+        }
+      ],
+      "wan_ip": "162.226.225.148",
+      "nat_sealed": true,
+      "wg_peers": 4
+    },
+    {
+      "id": 2,
+      "name": "processes",
+      "description": "alive binaries and daemons",
+      "rust": [
+        "skunky-ingest",
+        "opsonize-rs",
+        "skunkbat",
+        "songbird",
+        "beardog"
+      ],
+      "python": [
+        "scan_sweep_sort.py",
+        "membrane-pulse.py",
+        "gate-relay.py",
+        "canary-beacon.py",
+        "human_epitope.py",
+        "neutron-burst.py"
+      ],
+      "other": [
+        "caddy"
+      ],
+      "total": 12
+    },
+    {
+      "id": 3,
+      "name": "feeds",
+      "description": "JSON data layer (live-terminal/)",
+      "total": 52,
+      "active": 43,
+      "static": 5,
+      "stale": 4,
+      "total_size_mb": 20,
+      "writers": {
+        "skunky-ingest": 31,
+        "scan_sweep_sort": 6,
+        "opsonize-rs": 2,
+        "gate-relay": 1,
+        "canary-beacon": 1,
+        "manual": 5,
+        "squirrel": 1,
+        "pulse": 5
+      }
+    },
+    {
+      "id": 4,
+      "name": "surfaces",
+      "description": "HTTP endpoints humans see",
+      "pages": [
+        {
+          "path": "/",
+          "name": "HUD",
+          "type": "main"
+        },
+        {
+          "path": "/desk/",
+          "name": "desk/cockpit",
+          "type": "main",
+          "tabs": 14
+        },
+        {
+          "path": "/playground",
+          "name": "sort playground",
+          "type": "interactive"
+        },
+        {
+          "path": "/water",
+          "name": "watering hole / proton emitter",
+          "type": "diagnostic"
+        },
+        {
+          "path": "/braid/",
+          "name": "braid viewer",
+          "type": "exploration"
+        },
+        {
+          "path": "/neutron/core.html",
+          "name": "core membrane viz",
+          "type": "visualization"
+        },
+        {
+          "path": "/neutron/globe.html",
+          "name": "globe",
+          "type": "visualization"
+        },
+        {
+          "path": "/neutron/helix.html",
+          "name": "helix",
+          "type": "visualization"
+        },
+        {
+          "path": "/neutron/board.html",
+          "name": "board",
+          "type": "interactive"
+        },
+        {
+          "path": "/neutron/circulatory.html",
+          "name": "circulatory",
+          "type": "visualization"
+        },
+        {
+          "path": "/neutron/channels.html",
+          "name": "channels",
+          "type": "communication"
+        },
+        {
+          "path": "/neutron/footprint.html",
+          "name": "footprint",
+          "type": "diagnostic"
+        },
+        {
+          "path": "/neutron/invite.html",
+          "name": "invite",
+          "type": "social"
+        }
+      ],
+      "total": 13
+    },
+    {
+      "id": 5,
+      "name": "organisms",
+      "description": "alive processes with membrane capabilities",
+      "observers": [
+        "skunky-ingest",
+        "presence-observer",
+        "tower-observer",
+        "mesh-observer"
+      ],
+      "capabilities": 15,
+      "squirrel_uptime_hours": 148
+    },
+    {
+      "id": 6,
+      "name": "rhythm",
+      "description": "temporal heartbeat",
+      "cron_total": 4,
+      "pulse_interval_min": 2,
+      "beat": "every 2min: pulse \u2192 scan_sweep_sort \u2192 announce",
+      "nodes": {
+        "golgi": 1,
+        "eastgate": 1,
+        "sporeGate": 2
+      }
+    },
+    {
+      "id": 7,
+      "name": "code",
+      "description": "source code and scripts",
+      "membrane_scripts": 10,
+      "membrane_lines": 3065,
+      "hud_js_files": 77,
+      "hud_js_lines": 46355,
+      "desk_js_files": 10,
+      "desk_js_lines": 2128,
+      "fossils": 117,
+      "articles": 192
+    },
+    {
+      "id": 8,
+      "name": "content",
+      "description": "detroit investigation + graph",
+      "entities": 341,
+      "graph_nodes": 7533,
+      "graph_edges": 131322,
+      "classification_methods": 36,
+      "sort_classes": {
+        "self": 120,
+        "partial": 114,
+        "null": 100,
+        "non-self": 7
+      },
+      "confidence": 0.833,
+      "fleet_entities": 5876
+    },
+    {
+      "id": 9,
+      "name": "humans",
+      "description": "the quorum \u2014 humans are the quorum",
+      "unique_ips": 69194,
+      "human_ips": 3910,
+      "fleet_ips": 3642,
+      "sessions_active": 25,
+      "epitopes": {
+        "coder": 21,
+        "visitor": 4
+      },
+      "orbits_full_chain": 383,
+      "selectivity": 0.97,
+      "anderson_modes": 6,
+      "total_requests": 3349800
+    }
+  ],
+  "composition": {
+    "total_layers": 10,
+    "vertical_flow": "silicon \u2192 network \u2192 processes \u2192 feeds \u2192 surfaces \u2192 organisms \u2192 rhythm \u2192 code \u2192 content \u2192 humans",
+    "cycle": "humans \u2192 surfaces \u2192 feeds \u2192 processes \u2192 silicon \u2192 (back up)",
+    "particle_model": {
+      "proton": "membrane (identity, charge, selectivity)",
+      "neutron": "messaging (stability, mailbox, no bias)",
+      "electron": "human viewer (orbits, energy levels)",
+      "neutrino": "squirrel+chipmunk (null, passes through)"
+    },
+    "forces": {
+      "strong": "Rust (skunky, opsonize, beardog, songbird, skunkbat)",
+      "electromagnetic": "HTTPS (Caddy, TLS, certificates)",
+      "weak": "anderson sort (classification, selectivity)",
+      "gravity": "tuebor (published theory, 192 articles)"
+    }
+  },
+  "_fossil": true,
+  "_fossil_note": "orphan feed \u2014 no living producer. preserved as snapshot."
+}

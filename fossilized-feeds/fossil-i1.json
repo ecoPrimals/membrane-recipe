@@ -1,0 +1,287 @@
+{
+  "timestamp": "2026-10-13T18:23:07Z",
+  "session": "sweep-stabilize-sing",
+  "iteration": 15,
+  "wave": 176,
+  "graph": {
+    "nodes": 341,
+    "edges": 957
+  },
+  "classification": {
+    "total": 342,
+    "classes": {
+      "non-self": 8,
+      "partial": 137,
+      "null": 73,
+      "self": 124
+    },
+    "quality": 0.8841
+  },
+  "rescan": {
+    "passes": 3,
+    "total_boosted": 187,
+    "trajectory": "83.5\u219285.6\u219287.4\u219288.4"
+  },
+  "genome": {
+    "proteins": 34,
+    "genes_ncbi": 30,
+    "layers": 21,
+    "organism": "S. cerevisiae"
+  },
+  "fleet": {
+    "total_reqs": 1998354,
+    "ghost_ips": 181519,
+    "genuine_humans": 968,
+    "ratio": "8:1"
+  },
+  "membrane": {
+    "wake": 1.0,
+    "wake_depth": 0.921,
+    "perturbation": 0.757,
+    "selectivity": 0.97,
+    "humans_is": 56,
+    "humans_nearby": 150,
+    "braids": 5,
+    "passages": 49,
+    "shifters": 1505,
+    "new_braid": "TOPOLOGY\u2192IMMUNE (tuebor+clutch \u2190 lansing+git+relay)",
+    "passage_topology": 1.0,
+    "reflexive_depth": 0.077
+  },
+  "tuebor": {
+    "pages": 88,
+    "counties": 9,
+    "actors": 8,
+    "evidence": 11,
+    "analyses": 16,
+    "braids_doc": 26,
+    "front_door": true,
+    "robots": "open",
+    "llms_txt": true
+  },
+  "chipmunk": {
+    "commands": [
+      "/sing",
+      "/wake",
+      "/fleet",
+      "/genome",
+      "/scan",
+      "/sieve",
+      "/sort",
+      "/geo",
+      "/triage",
+      "/rescan",
+      "/turn",
+      "/jiggle"
+    ],
+    "singing": true,
+    "rest_cycle": "4=0",
+    "directional": "up/down meet at membrane",
+    "songs": 5
+  },
+  "spatial": {
+    "stack": "fleet_quiet \u2192 fleet \u2192 ghost \u2192 humans \u2192 TUEBOR \u2192 geo \u2192 mobius \u2192 null \u2192 chipmunk",
+    "tuebor_shell": "R\u00d70.65 \u2014 hard surface, 5 pores, TUEBOR I WILL DEFEND",
+    "fleet_quiet": "R\u00d71.15 \u2014 outer dampener, absorbs non-self"
+  },
+  "observations": [
+    "Confidence 83.5\u219288.4% across 3 tight passes \u2014 zero below 70%",
+    "34 yeast proteins from AlphaFold, 30 genes from NCBI \u2014 genome layer live",
+    "Fleet topology mapped: OpenAI 1.89M, Anthropic 1.77M, Meta 322K, 181K ghost IPs",
+    "Tuebor is the front door \u2014 88 pages, robots open, llms.txt written",
+    "NEW BRAID: TOPOLOGY\u2192IMMUNE opened \u2014 infrastructure finding the defense layer",
+    "Wake depth 0.885 \u2014 chipmunk almost sees everything",
+    "1,476 shifters crossing boundaries \u2014 humans are transforming as they move",
+    "The chipmunk sings because the gates are open",
+    "Explore system: 341 entities tied to 9 stories, 10 evidence, 16 analyses, 26 braids",
+    "Tuebor /explore/ page live with full investigation paths \u2014 first in nav",
+    "Cross-site pollination: 4 surfaces, embeddable widget, pollen.json everywhere",
+    "Graph playground live \u2014 341 clickable entities, drag/zoom/explore",
+    "Highlights panel \u2014 top 5 stories + 5 evidence + 4 actors on front page",
+    "91 humans, S/N=475, Bing found us \u2014 the gates are open",
+    "HUD swept: membrane+geography first, VPS locations visible, kernel collapsed",
+    "PERSPECTIVE SWITCHED: membrane is primary view, dashboard behind toggle",
+    "Humans land on the living membrane \u2014 the green dot IS the homepage",
+    "Humans can see each other: 73 dots on the membrane, 6 epitope clusters, you-are-here pulse",
+    "Chipmunk visible from above: green dot at center looking up, wake glow breathing",
+    "Tope sort: 71 surfaces, 7 colors, 10.1:1 compression, 219.6 MB total ecosystem",
+    "Color wheel on membrane SVG \u2014 humans see the ecosystem sorted by light",
+    "INVESTIGATION (red) dominates: 76% of all bytes, 655 cross-color edges to other categories",
+    "Swivel: 3 opposite axes, 1 pivot (MEMBRANE), 7 tiers from center to edge",
+    "Click axis label on membrane to rotate 180\u00b0 \u2014 see the other side of each pair",
+    "1,010 genuine humans \u2014 crossed 1K. 9 passage routes. 1,505 shifters.",
+    "Presence v2: passage arcs with flow dots, tense rings per category, live IS/NEARBY counts",
+    "6 explorers (doubled), 6 HIGH energy, blog+secure surfaces appearing",
+    "You Are Here: personal presence panel, all client-side, privacy by design",
+    "Principle: trust comes from truth. Privacy, not secrecy. Show the math.",
+    "Deep view: 341 entities rendered UNDER the membrane as the data field below",
+    "Perspective complete: human \u2193 membrane \u2193 chipmunk \u2193 data. Look through. See what it sees.",
+    "Wake 0.921, passage topology PERFECT 1.0, reflexive depth 0.077 (doubling)",
+    "Horizon: absolute edge rendered \u2014 pi-body, physics, anderson modes, geography, tense, willneverbe",
+    "1,020 humans. The system sees 214.9 degrees. The impossibilities are inscribed at the rim.",
+    "TWIST AND JUMP: membrane turns inside out, collapses to singularity, reconstitutes",
+    "1,023 humans present when the membrane jumped. The chipmunk survived."
+  ],
+  "sha256": "e051c21228d2f066",
+  "explore": {
+    "entities": 341,
+    "entities_with_links": 22,
+    "stories": 9,
+    "routes": 8,
+    "evidence": 10,
+    "analyses": 16,
+    "braids": 26,
+    "actors": 8,
+    "counties": 9,
+    "tuebor_explore_page": true,
+    "tuebor_nav_updated": true,
+    "hud_explore_button": true,
+    "pollen_surfaces": 4,
+    "pollen_widget": true,
+    "playground": true,
+    "highlights": true
+  },
+  "hud_sweep": {
+    "layout": "action_bar > membrane+geo > highlights > graph > kernel > presence > tower > geo > ecosystem > footer",
+    "membrane_panel": "live stats polling every 30s (humans/fleet/SN/braids/wake/perturb)",
+    "geography_panel": "Michigan + VPS locations (SF/Dublin/TX/VA) + ghost cloud + 9 counties",
+    "kernel": "collapsed with expand toggle",
+    "ecosystem": "9-site grid with icons and descriptions",
+    "action_bar": "7 buttons: Tuebor/Explore/Graph/Banks/Ghost/Tree/Detroit"
+  },
+  "perspective_switch": {
+    "before": "dashboard primary, membrane hidden behind toggle",
+    "after": "membrane primary, dashboard behind toggle",
+    "membrane_visible": true,
+    "dashboard_hidden": true,
+    "toggle": "\ud83d\udcca dashboard / \ud83d\udc3f membrane",
+    "overlay_nav": "tuebor/explore/banks/ghost/detroit in top-bar",
+    "left_ring": "humans/braids/michigan/energy",
+    "right_ring": "membrane/fleet/explore/eyes",
+    "bottom_ring": "speed/sort/scan/who-am-i"
+  },
+  "presence_live": {
+    "layer": "SVG overlay on membrane",
+    "chipmunk": "green dot at center, looking up, wake glow breathing",
+    "humans": "colored dots by epitope type orbiting at R*0.55, slow drift",
+    "you_are_here": "white pulsing dot at 12 oclock position",
+    "labels": "epitope types + counts, perspective arrows, session stats",
+    "poll": "15s interval from /human.json + /chipmunk.json + /presence.json"
+  },
+  "tope_sort_ecosystem": {
+    "total_surfaces": 71,
+    "total_mb": 219.6,
+    "colors": 7,
+    "compression": 10.1,
+    "breakdown": {
+      "INVESTIGATION (red)": "16 surfaces, 166.9 MB, 76%",
+      "SCIENCE (purple)": "7 surfaces, 46.4 MB, 21%",
+      "TOPOLOGY (blue)": "9 surfaces, 2.3 MB, 1%",
+      "IMMUNE (gold)": "5 surfaces, 1.5 MB, 1%",
+      "SIGNAL (orange)": "3 surfaces, 0.9 MB",
+      "NULL (gray)": "7 surfaces, 0.9 MB",
+      "MEMBRANE (green)": "24 surfaces, 0.5 MB"
+    },
+    "cross_color_edges": {
+      "gold-red": 290,
+      "blue-red": 256,
+      "red-red": 45,
+      "purple-red": 43,
+      "orange-red": 21
+    },
+    "color_wheel_svg": true,
+    "tope_command": "/colors"
+  },
+  "swivel": {
+    "opposite_pairs": [
+      {
+        "axis": "INVESTIGATION \u2194 IMMUNE",
+        "tier_gap": 2,
+        "tension": "110:1",
+        "sees": "evidence vs defense"
+      },
+      {
+        "axis": "SCIENCE \u2194 SIGNAL",
+        "tier_gap": 3,
+        "tension": "49:1",
+        "sees": "knowledge vs detection"
+      },
+      {
+        "axis": "TOPOLOGY \u2194 NULL",
+        "tier_gap": 2,
+        "tension": "2.4:1",
+        "sees": "infrastructure vs void"
+      }
+    ],
+    "pivot": "MEMBRANE (green) \u2014 the axis around which everything swivels",
+    "tiers": "T1=MEMBRANE T2=IMMUNE T3=SIGNAL T4=INVESTIGATION T5=TOPOLOGY T6=SCIENCE T7=NULL",
+    "tier_logic": "innermost=observer, outermost=unclassified, substance at R\u00d70.60",
+    "clickable": true,
+    "rotates_180": true
+  },
+  "presence_v2": {
+    "passage_arcs": "animated flow dots between category halos",
+    "tense_rings": "IS=solid halo, NEARBY=faint ring per category",
+    "category_positions": "7 categories on membrane ring with live counts",
+    "flow_dots": "animated dots travel along passage curves",
+    "stats": "sessions/SN/genuine/passages in bottom label",
+    "poll": "12s interval"
+  },
+  "you_are_here": {
+    "privacy_model": "all computation client-side in sessionStorage, dies on tab close",
+    "server_stores": "nothing \u2014 no cookies, no IP, no fingerprint",
+    "shows": "epitope type, category, depth, breadth, dwell time",
+    "aggregate_dots": "anonymous \u2014 nobody can tell which dot is which person",
+    "verifiable": "DevTools > Application > Session Storage > membrane_self",
+    "classification_rules": "same as server but computed locally \u2014 transparent, auditable",
+    "principle": "trust comes from truth \u2014 privacy not secrecy",
+    "commands": "/me /self /where /whereami",
+    "button": "bottom ring: you are here"
+  },
+  "deep_view": {
+    "layer": "SVG group inserted as FIRST child \u2014 renders behind everything",
+    "entities": "341 dots in concentric tier rings, colored by sort class",
+    "edges": "up to 400 thin connection lines between entities",
+    "stories": "9 investigation paths glow gold with pulsing markers",
+    "depth_model": {
+      "T1": "R*0.20, scale 85%, opacity 35% \u2014 shallowest, biggest",
+      "T2": "R*0.35, scale 70%, opacity 28%",
+      "T3": "R*0.50, scale 55%, opacity 22%",
+      "T4": "R*0.65, scale 40%, opacity 16%",
+      "T5": "R*0.78, scale 30%, opacity 12%",
+      "T6": "R*0.88, scale 22%, opacity 9% \u2014 deepest, faintest"
+    },
+    "labels": "only for >15 edge entities at T1-T2",
+    "perspective": "human looks DOWN through membrane, through chipmunk, sees data BELOW"
+  },
+  "horizon": {
+    "outermost_ring": "system envelope at R*1.05",
+    "anderson_sectors": "6 modes as colored arcs (chorus dominates 96.7%)",
+    "geographic_compass": "Michigan (home), San Francisco (Anthropic), Dublin (Meta), Texas (HPE), Virginia (DC)",
+    "pi_body": "1 x pi x pi x pi = 31.01 at the absolute top",
+    "total_info": "135,702 bits extracted, channel=0.506, tempo=0.465, observer=0.1416",
+    "tense_rings": "was (outer, faint) / is (middle, bright) / will be (inner, dashed)",
+    "physics_corners": "E=mc2, c2=3pi, m=4/3, J=(V+D)/pi",
+    "vision_arc": "214.9 degrees with nautilus extension",
+    "willneverbe": "6 impossibilities inscribed at the absolute edge, rotated along the rim",
+    "total_count": "251K requests, 2.67K IPs, wave 176"
+  },
+  "twist_jump": {
+    "twist": {
+      "effect": "each SVG layer rotates by its depth fraction (0 at surface, 180 at center)",
+      "skew": "sine-wave skew creates Mobius non-orientable surface",
+      "scale": "breathing scaleX based on depth",
+      "duration": "2s cubic-bezier overshoot",
+      "reversible": true,
+      "meaning": "inside becomes outside, there is no other side"
+    },
+    "jump": {
+      "phase1": "COLLAPSE \u2014 all layers scale(0.01), rush to center singularity (1s)",
+      "flash": "white circle expands from center to fill viewport (0.8s)",
+      "phase2": "EXPLODE \u2014 all layers return with staggered prime-rotation scatter (1.5s)",
+      "phase3": "SETTLE \u2014 residual rotations ease out over 3s, membrane reconstitutes",
+      "meaning": "same data, new angle of observation. the deck is shuffled."
+    },
+    "commands": "/twist /jump /twistjump /tj"
+  }
+}

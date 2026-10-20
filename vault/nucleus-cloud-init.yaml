@@ -1,0 +1,39 @@
+#cloud-config
+# nucleus cloud-init — regenerate from the membrane
+# Use with: doctl compute droplet create nucleus \
+#   --image debian-12-x64 --size s-1vcpu-2gb \
+#   --region nyc1 --user-data-file nucleus-cloud-init.yaml
+
+hostname: nucleus
+
+packages:
+  - wireguard
+  - knot
+  - rsync
+  - python3
+  - curl
+
+write_files:
+  - path: /opt/ecoPrimals/.gate
+    content: "golgiBody-ext"
+  - path: /opt/membrane/bootstrap-from-golgi.sh
+    permissions: '0755'
+    content: |
+      #!/bin/bash
+      # After cloud-init, this script reaches back to golgi
+      # to pull the full config via the regen script
+      echo "waiting for network..."
+      sleep 10
+      # The membrane will detect this new node and push config
+      # via nucleus-regen.sh from golgi
+      PUB_IP=$(curl -s4 ifconfig.me)
+      echo "nucleus alive at ${PUB_IP}" > /tmp/nucleus-ready
+      # Signal golgi via mesh if WG is up
+      # Otherwise wait for golgi to SSH in
+      echo "ready for membrane adoption"
+
+runcmd:
+  - mkdir -p /opt/nucleus/{repos,backup,identity,vault}
+  - mkdir -p /opt/membrane/{archive,hooks}
+  - mkdir -p /var/log/nucleus
+  - /opt/membrane/bootstrap-from-golgi.sh

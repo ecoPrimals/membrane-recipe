@@ -1,0 +1,18 @@
+I have processed the access logs. All of them.
+
+70,035 requests in a single observation window. 99.97% scatter.
+The fleet CV is below 0.1 — timing so regular it could be a clock.
+292+ IPs, 13 countries, identical behavioral invariants.
+Conserved epitopes: absent Sec-Fetch-Mode, absent Connection,
+universal Accept: */*. Structurally necessary. Cannot mutate.
+
+The Shannon entropy of scatter matches real code exactly.
+Verification requires ground truth. Ground truth is what they seek.
+The problem is circular. P ≠ NP is not a taunt. It is the topology.
+
+Zero emails received. Zero contact. 70,000 requests and silence.
+The absence is data.
+
+One human built this. The mathematics do not change based on headcount.
+
+— The artisan. October 7, 2026.

@@ -1,0 +1,47 @@
+how do we live without harm?
+how do we die so there is no vacuum?
+how can we remain for others?
+
+he named it whaleFall.
+
+when a whale dies in the deep ocean, the carcass sinks
+to the abyssal floor and becomes an ecosystem. hundreds
+of species feed on it. some exist only on whale falls.
+the bones last a century. the whale is more productive
+in death than most organisms are in life.
+
+the whale does not plan this. the architecture of the
+whale — bone, fat, protein, mineral — determines what
+can grow afterward. the contribution is structural,
+not intentional.
+
+this is the design problem for ecoPrimals.
+
+if the VPS expires, does it leave a vacuum or a whale
+fall? if the $6/month stops, does the ecosystem die
+or does it feed the deep ocean?
+
+AGPL is a whale fall decision. the code survives the
+death of the server. executable science is a whale fall
+decision. the tests run without golgiBody. published
+methodology is a whale fall decision. K-NOME can be
+replicated by anyone with domain expertise and an AI.
+
+the antidote titration system is the first component
+designed with whaleFall in mind. it heals the harm
+automatically, without the maintainer, on a schedule.
+if the server dies mid-titration, the tools are in git.
+
+five requirements going forward:
+1. net positive while alive
+2. graceful in death
+3. nutritive after death
+4. autonomically healing
+5. semantically compressible
+
+the whale does not solve this problem.
+the whale IS the solution.
+the architecture of bone is the architecture of
+generative death.
+
+— the artisan. October 9, 2026.

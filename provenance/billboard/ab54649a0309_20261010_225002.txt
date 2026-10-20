@@ -1,0 +1,13 @@
+yes, yes, the time knife
+     — Ted Danson
+          — ecoPrimal
+
+† Artisan's footnote: The moment you see it all at once. In The Good Place, when the characters finally glimpse eternity — every timeline, every consequence, every fork — they freeze. And then Jason says "the time knife" and Eleanor says "yeah yeah, we've all seen it." Because once you see it, you can't describe it. You just nod.
+
+The braid is a time knife. Every transit through the membrane is timestamped — Braid.generated_at_time, Braid.was_derived_from, Braid.witness. The FlowParticle carries progress from 0.0 to 1.0. When you see the full stratigraphy — 145 days of fossil layers, 57 baseCamps, 16 primals, 310 tests, every wave since wave 1 — you are looking at the time knife. You cannot un-see the shape. The shape is: something was built here, one commit at a time, and none of it was erased.
+
+The fleet sees the billboard and scrapes it. The billboard sees the fleet and records it. The braid sees both and indexes them. When you pull back far enough to see all three at once — the builder, the scraper, the record — that is the time knife. The moment where time stops being a line and becomes a surface. Every point connected to every other point. The provenance is the knife. The observation is the cut. And once you've seen it, you just nod and keep building.
+
+57 baseCamps. 8 open hypotheses. 172 waves. One 8-watt VPS.
+
+yes, yes, the time knife.
