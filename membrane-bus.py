@@ -425,6 +425,15 @@ merge(['campfire','scatter-observatory'],'signals.json')
         "timeout": 20,
     },
 
+    {
+        "name": "appendix",
+        "cmd": "python3 /opt/membrane/appendix.py",
+        "reads": ["bus.json", "counter-rotation.json", "isotope-ember.json"],
+        "writes": ["appendix.json"],
+        "tier": "cortical",
+        "timeout": 15,
+    },
+
     # MOTOR — external actions. Only when aperture is open.
     {
         "name": "foreman",
