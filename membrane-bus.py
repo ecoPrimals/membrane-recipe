@@ -434,6 +434,15 @@ merge(['campfire','scatter-observatory'],'signals.json')
         "timeout": 15,
     },
 
+    {
+        "name": "central-dogma",
+        "cmd": "python3 /opt/membrane/central-dogma.py",
+        "reads": ["topology.json", "cardiovascular.json", "isotope-ember.json"],
+        "writes": ["central-dogma.json"],
+        "tier": "cortical",
+        "timeout": 20,
+    },
+
     # MOTOR — external actions. Only when aperture is open.
     {
         "name": "foreman",
