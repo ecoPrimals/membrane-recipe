@@ -593,8 +593,9 @@ def main():
             skipped["aperture"] += 1
             continue
 
-        # Motor tier needs wide aperture
-        if tier == "motor" and apt < 0.4:
+        # Motor drips if aperture is open at all (floor 0.12). Was 0.4 —
+        # on a 1-CPU VPS that brick-walled the colon.
+        if tier == "motor" and apt < 0.10:
             log("  ○ %s (motor deferred, aperture=%.2f)" % (name, apt))
             skipped["aperture"] += 1
             continue
