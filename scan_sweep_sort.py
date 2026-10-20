@@ -1814,7 +1814,27 @@ def main():
     chipmunk = fetch(FEEDS["chipmunk"])
     human = fetch(FEEDS["human"])
     classification = fetch(CLASSIFICATION_URL)
+    if not isinstance(classification, dict) or classification.get("_error") or not classification.get("entities"):
+        for p in (
+            "/opt/ecoPrimals/detroit/public/classification.json",
+            "/opt/membrane/live-terminal/classification.json",
+        ):
+            try:
+                classification = json.load(open(p))
+                break
+            except Exception:
+                pass
     graph = fetch(GRAPH_URL)
+    if not isinstance(graph, dict) or graph.get("_error") or not graph.get("nodes"):
+        for p in (
+            "/opt/ecoPrimals/detroit/public/graph.json",
+            "/opt/ecoPrimals/detroit/public/static/graph.json",
+        ):
+            try:
+                graph = json.load(open(p))
+                break
+            except Exception:
+                pass
 
     # Fleet sort (local — reads antibodies.json)
     fleet_data = fleet_sort()

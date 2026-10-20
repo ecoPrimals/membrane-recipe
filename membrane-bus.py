@@ -58,8 +58,12 @@ def cpu_load():
 
 def aperture(load):
     """How wide the opening is. 0.0 = shut, 1.0 = wide open.
-    Low load = wide aperture. High load = narrow."""
-    return max(0.0, min(1.0, 1.0 - (load - 0.3) / 0.7))
+    Non-Newtonian: thick under shear, never a brick wall.
+    1-CPU VPS at load 2.7 used to clamp to 0 — motor never dripped.
+    Sigmoid around load=1.2, floor 0.12 so cortical/motor can still move.
+    """
+    import math
+    return max(0.12, min(1.0, 1.0 / (1.0 + math.exp(2.2 * (load - 1.2)))))
 
 
 def gradient(inputs, outputs):
@@ -141,6 +145,22 @@ BUS = [
         "writes": ["cardiovascular.json"],
         "tier": "vital",
         "timeout": 10,
+    },
+    {
+        "name": "circulatory",
+        "cmd": "python3 /opt/membrane/circulatory-sense.py",
+        "reads": ["topology.json", "cardiovascular.json"],
+        "writes": ["circulatory.json"],
+        "tier": "sensory",
+        "timeout": 15,
+    },
+    {
+        "name": "heartbeat-sense",
+        "cmd": "python3 /opt/membrane/heartbeat-sense.py",
+        "reads": ["dashboard.json", "cardiovascular.json", "passage-totality.json"],
+        "writes": ["heartbeat.json"],
+        "tier": "sensory",
+        "timeout": 15,
     },
     {
         "name": "wake-cycle",
