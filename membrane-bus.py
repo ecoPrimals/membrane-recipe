@@ -407,6 +407,15 @@ merge(['campfire','scatter-observatory'],'signals.json')
         "timeout": 30,
     },
 
+    {
+        "name": "counter-rotation",
+        "cmd": "python3 /opt/membrane/bus-rotation.py",
+        "reads": ["topology.json", "cardiovascular.json", "assumptions.json", "edge-scatter.json"],
+        "writes": ["counter-rotation.json"],
+        "tier": "cortical",
+        "timeout": 45,
+    },
+
     # MOTOR — external actions. Only when aperture is open.
     {
         "name": "foreman",
