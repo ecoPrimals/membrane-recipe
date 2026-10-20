@@ -416,6 +416,15 @@ merge(['campfire','scatter-observatory'],'signals.json')
         "timeout": 45,
     },
 
+    {
+        "name": "isotope-ember",
+        "cmd": "python3 /opt/membrane/isotope-ember.py",
+        "reads": ["topology.json"],
+        "writes": ["isotope-ember.json"],
+        "tier": "cortical",
+        "timeout": 20,
+    },
+
     # MOTOR — external actions. Only when aperture is open.
     {
         "name": "foreman",
