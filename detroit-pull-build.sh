@@ -18,26 +18,47 @@ if [ "$DIRTY" -gt 0 ]; then
     git checkout -- site/public/ 2>/dev/null || true
 fi
 
-# ─── FETCH FROM ALL REMOTES (mesh pattern from tuebor) ───
+# ─── FETCH — northGate owns github. github first, then forgejo. ───
 NEED_BUILD=false
-for REMOTE_NAME in http-origin origin github; do
+for REMOTE_NAME in github http-origin origin; do
     if git fetch --depth=1 "$REMOTE_NAME" main 2>>"$LOG"; then
         LOCAL=$(git rev-parse HEAD)
         REMOTE_HEAD=$(git rev-parse "$REMOTE_NAME/main" 2>/dev/null || echo "unknown")
 
         if [ "$LOCAL" != "$REMOTE_HEAD" ] && [ "$REMOTE_HEAD" != "unknown" ]; then
-            if git merge-base --is-ancestor "$LOCAL" "$REMOTE_HEAD" 2>/dev/null; then
-                echo "[$(date -Is)] detroit: new commits on $REMOTE_NAME ($LOCAL → $REMOTE_HEAD)" >> "$LOG"
+            FF=false
+            git merge-base --is-ancestor "$LOCAL" "$REMOTE_HEAD" 2>/dev/null && FF=true
+            # northGate owns github. take it even when histories diverged.
+            if [ "$FF" = "true" ] || [ "$REMOTE_NAME" = "github" ]; then
+                echo "[$(date -Is)] detroit: taking $REMOTE_NAME ($LOCAL → $REMOTE_HEAD) ff=$FF" >> "$LOG"
                 git reset --hard "$REMOTE_HEAD" 2>>"$LOG"
                 NEED_BUILD=true
-                break  # take first remote with new commits
+                break
             fi
         fi
     fi
 done
 
-# Check if build is needed
+# northGate pipeline status — always written so the capillary can see lag
 HEAD=$(git rev-parse HEAD 2>/dev/null || echo "unknown")
+GITHUB_HEAD=$(git rev-parse github/main 2>/dev/null || echo "unknown")
+python3 - <<PY
+import json, time, os
+p = {
+  "ts": time.time(),
+  "utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+  "gate": "northGate",
+  "role": "github is the authority. golgi pulls github first.",
+  "detroit": {
+    "local": "$HEAD",
+    "github": "$GITHUB_HEAD",
+    "ahead": "$HEAD" != "$GITHUB_HEAD" and "$GITHUB_HEAD" != "unknown",
+  },
+  "note": "northGate in charge of publicRecord. site pulls when github moves."
+}
+open("/opt/membrane/live-terminal/northgate-pipeline.json","w").write(json.dumps(p, separators=(",", ":")))
+PY
+
 LAST=$(cat "$STATE" 2>/dev/null || echo "none")
 
 if [ "$HEAD" = "$LAST" ] && [ "$NEED_BUILD" = "false" ]; then

@@ -9,6 +9,13 @@ LOG=/var/log/membrane/hud-pull.log
 
 cd "$REPO"
 
+# Live HUD is often scp'd. Do not clobber a dirty public tree.
+DIRTY=$(git status --porcelain -- site/public/ 2>/dev/null | wc -l)
+if [ "$DIRTY" -gt 0 ]; then
+    echo "[$(date -Is)] hud: SKIP pull — $DIRTY dirty public files (live scp). northGate does not overwrite the glass." >> "$LOG"
+    exit 0
+fi
+
 git fetch origin 2>>"$LOG" || exit 0
 
 LOCAL=$(git rev-parse HEAD)

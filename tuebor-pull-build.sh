@@ -17,8 +17,8 @@ if [ "$DIRTY" -gt 0 ]; then
     git checkout -- site/public/ 2>/dev/null || true
 fi
 
-# Pull from all remotes — eastGate pushes to origin (Forgejo), github is public mirror
-for REMOTE_NAME in origin github; do
+# northGate owns github. github first, then forgejo.
+for REMOTE_NAME in github origin; do
     if git fetch "$REMOTE_NAME" 2>>"$LOG"; then
         LOCAL=$(git rev-parse HEAD)
         REMOTE_HEAD=$(git rev-parse "$REMOTE_NAME/main" 2>/dev/null || echo "unknown")

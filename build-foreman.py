@@ -34,23 +34,33 @@ def check_site(name, repo_path, state_file, build_script):
         verdict['reason'] = 'repo not found: %s' % repo_path
         return verdict
 
+    # northGate: fetch github before deciding SKIP. local HEAD matching
+    # last-built is not "up to date" if github has moved.
+    cmd('git -C %s fetch --depth=1 github main' % repo_path, timeout=20)
     head = cmd('git -C %s rev-parse HEAD' % repo_path)
+    github = cmd('git -C %s rev-parse github/main' % repo_path)
     last = ''
     try:
         last = open(state_file).read().strip()
     except:
         pass
 
-    if head == last:
+    if github and github != 'unknown' and github != head:
+        verdict['checks'].append({
+            'check': 'needs_build', 'pass': True,
+            'note': 'northGate github ahead %s -> %s' % (head[:8], github[:8])
+        })
+        # fall through to RAM/clean checks
+    elif head == last:
         verdict['verdict'] = 'SKIP'
         verdict['reason'] = 'HEAD matches last-built (%s)' % head[:8]
         verdict['checks'].append({'check': 'needs_build', 'pass': False, 'note': 'up to date'})
         return verdict
-
-    verdict['checks'].append({
-        'check': 'needs_build', 'pass': True,
-        'note': '%s -> %s' % (last[:8] or 'none', head[:8])
-    })
+    else:
+        verdict['checks'].append({
+            'check': 'needs_build', 'pass': True,
+            'note': '%s -> %s' % (last[:8] or 'none', head[:8])
+        })
 
     # --- FOREMAN: Check conditions ---
 
