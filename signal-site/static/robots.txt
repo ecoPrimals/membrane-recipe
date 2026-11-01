@@ -6,3 +6,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://signal.primals.eco/sitemap.xml
+# AI context document
+# See https://signal.primals.eco/llms.txt for full site context
+
